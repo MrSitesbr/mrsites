@@ -25,8 +25,8 @@
     --muted: 48 30% 94%;
     --muted-foreground: 0 0% 30%;
 
-    /* Magenta neon */
-    --accent: 320 100% 50%;
+    /* Azul Royal */
+    --accent: 225 100% 45%;
     --accent-foreground: 0 0% 100%;
 
     /* Cyano neon */
@@ -50,20 +50,20 @@
     --radius: 0.25rem;
 
     /* Gradientes e sombras dramáticas */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(280 80% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(225 80% 14%) 100%);
     --gradient-yellow: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(40 100% 55%) 100%);
-    --gradient-urgent: linear-gradient(90deg, hsl(320 100% 50%), hsl(48 100% 50%));
-    --gradient-neon: linear-gradient(90deg, hsl(320 100% 50%), hsl(185 100% 50%), hsl(130 100% 50%), hsl(48 100% 50%));
-    --gradient-vapor: linear-gradient(135deg, hsl(320 100% 50%) 0%, hsl(185 100% 50%) 100%);
+    --gradient-urgent: linear-gradient(90deg, hsl(225 100% 45%), hsl(48 100% 50%));
+    --gradient-neon: linear-gradient(90deg, hsl(225 100% 45%), hsl(185 100% 50%), hsl(130 100% 50%), hsl(48 100% 50%));
+    --gradient-vapor: linear-gradient(135deg, hsl(225 100% 45%) 0%, hsl(185 100% 50%) 100%);
 
     --shadow-bold: 6px 6px 0 0 hsl(0 0% 6%);
     --shadow-bold-yellow: 6px 6px 0 0 hsl(48 100% 50%);
-    --shadow-bold-magenta: 6px 6px 0 0 hsl(320 100% 50%);
+    --shadow-bold-magenta: 6px 6px 0 0 hsl(225 100% 45%);
     --shadow-bold-cyan: 6px 6px 0 0 hsl(185 100% 50%);
     --shadow-bold-green: 6px 6px 0 0 hsl(130 100% 50%);
     --shadow-lg: 0 20px 50px -10px hsl(0 0% 0% / 0.35);
     --shadow-glow: 0 0 40px hsl(48 100% 50% / 0.4);
-    --shadow-glow-magenta: 0 0 40px hsl(320 100% 50% / 0.6);
+    --shadow-glow-magenta: 0 0 40px hsl(225 100% 45% / 0.6);
     --shadow-glow-cyan: 0 0 40px hsl(185 100% 50% / 0.6);
     --shadow-glow-green: 0 0 40px hsl(130 100% 50% / 0.6);
 
@@ -118,8 +118,8 @@
   .tape-neon {
     background: repeating-linear-gradient(
       45deg,
-      hsl(320 100% 50%),
-      hsl(320 100% 50%) 20px,
+      hsl(225 100% 45%),
+      hsl(225 100% 45%) 20px,
       hsl(185 100% 50%) 20px,
       hsl(185 100% 50%) 40px,
       hsl(130 100% 50%) 40px,
