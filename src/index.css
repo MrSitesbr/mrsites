@@ -101,11 +101,33 @@
   }
   .shadow-bold { box-shadow: var(--shadow-bold); }
   .shadow-bold-yellow { box-shadow: var(--shadow-bold-yellow); }
+  .shadow-bold-magenta { box-shadow: var(--shadow-bold-magenta); }
+  .shadow-bold-cyan { box-shadow: var(--shadow-bold-cyan); }
+  .shadow-bold-green { box-shadow: var(--shadow-bold-green); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-glow-magenta { box-shadow: var(--shadow-glow-magenta); }
+  .shadow-glow-cyan { box-shadow: var(--shadow-glow-cyan); }
+  .shadow-glow-green { box-shadow: var(--shadow-glow-green); }
   .bg-gradient-hero { background: var(--gradient-hero); }
   .bg-gradient-yellow { background: var(--gradient-yellow); }
   .bg-gradient-urgent { background: var(--gradient-urgent); }
+  .bg-gradient-neon { background: var(--gradient-neon); }
+  .bg-gradient-vapor { background: var(--gradient-vapor); }
   .transition-smooth { transition: var(--transition); }
+
+  .tape-neon {
+    background: repeating-linear-gradient(
+      45deg,
+      hsl(320 100% 50%),
+      hsl(320 100% 50%) 20px,
+      hsl(185 100% 50%) 20px,
+      hsl(185 100% 50%) 40px,
+      hsl(130 100% 50%) 40px,
+      hsl(130 100% 50%) 60px,
+      hsl(48 100% 50%) 60px,
+      hsl(48 100% 50%) 80px
+    );
+  }
 
   .tape {
     background: repeating-linear-gradient(
