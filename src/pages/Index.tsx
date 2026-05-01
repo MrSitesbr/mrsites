@@ -125,12 +125,12 @@ const Index = () => {
       <Section className="bg-foreground border-b-4 border-foreground">
         <div className="grid md:grid-cols-4 gap-6">
           {[
-            { icon: Rocket, title: "Site no Ar em 7 Dias", desc: "Mandou os textos, Mr. Sites coloca no ar. Fim.", color: "primary", fg: "primary-foreground" },
-            { icon: Bot, title: "Chat IA 24/7", desc: "Robô inteligente conversa, qualifica e fecha venda.", color: "accent", fg: "accent-foreground" },
-            { icon: Search, title: "SEO Google + ChatGPT", desc: "Você aparece quando o cliente procura. E quando a IA responde.", color: "cyan-neon", fg: "cyan-neon-foreground" },
-            { icon: TrendingUp, title: "Site Que Vende", desc: "Não é cartão de visita. É máquina de gerar cliente.", color: "neon-green", fg: "neon-green-foreground" },
+            { icon: Rocket, title: "Site no Ar em 7 Dias", desc: "Mandou os textos, Mr. Sites coloca no ar. Fim.", cls: "bg-primary text-primary-foreground" },
+            { icon: Bot, title: "Chat IA 24/7", desc: "Robô inteligente conversa, qualifica e fecha venda.", cls: "bg-accent text-accent-foreground" },
+            { icon: Search, title: "SEO Google + ChatGPT", desc: "Você aparece quando o cliente procura. E quando a IA responde.", cls: "bg-cyan-neon text-cyan-neon-foreground" },
+            { icon: TrendingUp, title: "Site Que Vende", desc: "Não é cartão de visita. É máquina de gerar cliente.", cls: "bg-neon-green text-neon-green-foreground" },
           ].map((b, i) => (
-            <div key={i} className={`bg-[hsl(var(--${b.color}))] text-[hsl(var(--${b.fg}))] p-6 border-2 border-primary shadow-bold-yellow`}>
+            <div key={i} className={`${b.cls} p-6 border-2 border-primary shadow-bold-yellow`}>
               <b.icon className="w-10 h-10 mb-3" strokeWidth={2} />
               <h3 className="font-black text-xl uppercase mb-2">{b.title}</h3>
               <p className="opacity-80 text-sm">{b.desc}</p>
@@ -222,14 +222,14 @@ const Index = () => {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {[
-            { icon: Globe, title: "Site Institucional Profissional", color: "primary", items: ["Site profissional para empresa", "Site rápido que carrega em 1 segundo", "Site responsivo (celular, tablet, desktop)", "Design moderno e personalizado", "Páginas: Home, Sobre, Serviços, Contato, Blog", "Hospedagem inclusa e domínio configurado", "Certificado SSL (cadeado verde)", "Painel para você editar textos sem programador"] },
-            { icon: MousePointerClick, title: "Landing Page Que Converte", color: "accent", items: ["Landing page para captar lead", "Página de vendas com copy persuasivo", "Botão WhatsApp flutuante", "Formulário inteligente integrado ao seu CRM", "Pixel Facebook, Google Ads e TikTok", "Otimizada para anúncios pagos", "Carregamento ultra-rápido (Core Web Vitals 100)", "A/B test e analytics configurado"] },
-            { icon: ShoppingCart, title: "E-commerce e Loja Virtual", color: "cyan-neon", items: ["Loja virtual completa", "Pagamento Pix, cartão, boleto", "Integração com Correios e transportadoras", "Carrinho abandonado com recuperação por IA", "Catálogo de produtos ilimitado", "Cupons de desconto", "Avaliações de clientes", "Painel administrativo simples"] },
-            { icon: Bot, title: "Site com Chat IA Avançado", color: "neon-green", items: ["Chatbot com inteligência artificial", "Atendimento automático 24/7", "Qualificação de leads em tempo real", "Agendamento automático de reuniões", "Envio de orçamento na hora", "Integração com WhatsApp Business API", "Memória de conversas anteriores", "Treinamento personalizado pra sua empresa"] },
+            { icon: Globe, title: "Site Institucional Profissional", boxCls: "bg-primary text-primary-foreground", checkCls: "text-primary", items: ["Site profissional para empresa", "Site rápido que carrega em 1 segundo", "Site responsivo (celular, tablet, desktop)", "Design moderno e personalizado", "Páginas: Home, Sobre, Serviços, Contato, Blog", "Hospedagem inclusa e domínio configurado", "Certificado SSL (cadeado verde)", "Painel para você editar textos sem programador"] },
+            { icon: MousePointerClick, title: "Landing Page Que Converte", boxCls: "bg-accent text-accent-foreground", checkCls: "text-accent", items: ["Landing page para captar lead", "Página de vendas com copy persuasivo", "Botão WhatsApp flutuante", "Formulário inteligente integrado ao seu CRM", "Pixel Facebook, Google Ads e TikTok", "Otimizada para anúncios pagos", "Carregamento ultra-rápido (Core Web Vitals 100)", "A/B test e analytics configurado"] },
+            { icon: ShoppingCart, title: "E-commerce e Loja Virtual", boxCls: "bg-cyan-neon text-cyan-neon-foreground", checkCls: "text-cyan-neon", items: ["Loja virtual completa", "Pagamento Pix, cartão, boleto", "Integração com Correios e transportadoras", "Carrinho abandonado com recuperação por IA", "Catálogo de produtos ilimitado", "Cupons de desconto", "Avaliações de clientes", "Painel administrativo simples"] },
+            { icon: Bot, title: "Site com Chat IA Avançado", boxCls: "bg-neon-green text-neon-green-foreground", checkCls: "text-neon-green", items: ["Chatbot com inteligência artificial", "Atendimento automático 24/7", "Qualificação de leads em tempo real", "Agendamento automático de reuniões", "Envio de orçamento na hora", "Integração com WhatsApp Business API", "Memória de conversas anteriores", "Treinamento personalizado pra sua empresa"] },
           ].map((cat, i) => (
             <div key={i} className="bg-background border-2 border-foreground shadow-bold p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className={`bg-[hsl(var(--${cat.color}))] text-[hsl(var(--${cat.color}-foreground))] p-3 border-2 border-foreground`}>
+                <div className={`${cat.boxCls} p-3 border-2 border-foreground`}>
                   <cat.icon className="w-6 h-6" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-xl md:text-2xl font-black uppercase">{cat.title}</h3>
@@ -237,7 +237,7 @@ const Index = () => {
               <ul className="space-y-2">
                 {cat.items.map((it, j) => (
                   <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <CheckCircle2 className={`w-4 h-4 text-[hsl(var(--${cat.color}))] shrink-0 mt-0.5`} />
+                    <CheckCircle2 className={`w-4 h-4 ${cat.checkCls} shrink-0 mt-0.5`} />
                     <span>{it}</span>
                   </li>
                 ))}
@@ -350,12 +350,12 @@ const Index = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { nome: "Renata S.", empresa: "Clínica de Estética — SP", depo: "Tava perdendo cliente pra clínica concorrente que aparecia no Google. O Mr. Sites refez meu site e em 60 dias eu já tava em primeiro lugar. O chat fecha agendamento até de madrugada.", color: "accent" },
-            { nome: "Diego P.", empresa: "Distribuidora — RJ", depo: "Meu primeiro site da vida, fiz com o Walter. No ar em 6 dias. Em 3 meses o chat IA já tinha fechado mais de 80 pedidos sozinho. Investimento se pagou no primeiro mês.", color: "cyan-neon" },
-            { nome: "Camila T.", empresa: "Coach — Online", depo: "O ChatGPT começou a me indicar quando alguém pergunta sobre coach de carreira. SEO do Mr. Sites é outro nível. E o chat conversa exatamente como eu falaria. Surreal.", color: "neon-green" },
+            { nome: "Renata S.", empresa: "Clínica de Estética — SP", depo: "Tava perdendo cliente pra clínica concorrente que aparecia no Google. O Mr. Sites refez meu site e em 60 dias eu já tava em primeiro lugar. O chat fecha agendamento até de madrugada.", shadowCls: "shadow-bold-magenta", starCls: "text-accent" },
+            { nome: "Diego P.", empresa: "Distribuidora — RJ", depo: "Meu primeiro site da vida, fiz com o Walter. No ar em 6 dias. Em 3 meses o chat IA já tinha fechado mais de 80 pedidos sozinho. Investimento se pagou no primeiro mês.", shadowCls: "shadow-bold-cyan", starCls: "text-cyan-neon" },
+            { nome: "Camila T.", empresa: "Coach — Online", depo: "O ChatGPT começou a me indicar quando alguém pergunta sobre coach de carreira. SEO do Mr. Sites é outro nível. E o chat conversa exatamente como eu falaria. Surreal.", shadowCls: "shadow-bold-green", starCls: "text-neon-green" },
           ].map((d, i) => (
-            <div key={i} className={`bg-background p-6 border-2 border-foreground shadow-bold-${d.color === 'accent' ? 'magenta' : d.color === 'cyan-neon' ? 'cyan' : 'green'}`}>
-              <div className={`flex gap-1 mb-3 text-[hsl(var(--${d.color}))]`}>
+            <div key={i} className={`bg-background p-6 border-2 border-foreground ${d.shadowCls}`}>
+              <div className={`flex gap-1 mb-3 ${d.starCls}`}>
                 {[...Array(5)].map((_, s) => <Star key={s} className="w-5 h-5 fill-current" />)}
               </div>
               <p className="text-muted-foreground italic mb-4 leading-relaxed">"{d.depo}"</p>
