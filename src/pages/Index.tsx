@@ -1,24 +1,24 @@
-import { MessageCircle, Phone, CircleCheck as CheckCircle2, MapPin, Warehouse, Factory, Store, Truck, Clock, Shield, Zap, TrendingUp, Star, TriangleAlert as AlertTriangle, Mail, Instagram, Globe } from "lucide-react";
-import heroImg from "@/assets/hero-galpao.jpg";
-import brazImg from "@/assets/corretor-braz.jpg";
-import brazPhoneImg from "@/assets/ligue-para-corretor-bras-especialista-em-galpoes-comerciais-em-praia-grande.png";
-import internoImg from "@/assets/galpao-interno.jpg";
-import marginalImg from "@/assets/regiao-marginal.jpg";
+import { MessageCircle, Phone, CircleCheck as CheckCircle2, Globe, Bot, Code2, Rocket, Search, Clock, Shield, Zap, TrendingUp, Star, TriangleAlert as AlertTriangle, Mail, Instagram, Sparkles, MousePointerClick, Smartphone, BrainCircuit, ShoppingCart, BadgeCheck } from "lucide-react";
+import heroImg from "@/assets/walter-hero.jpg";
+import walterImg from "@/assets/walter-portrait.jpg";
+import walterPhoneImg from "@/assets/walter-phone.jpg";
+import chatMockupImg from "@/assets/ai-chat-mockup.jpg";
+import neonBgImg from "@/assets/neon-tech-bg.jpg";
 
-// DADOS DO CORRETOR BRAZ MOTA
-const BRAZ = {
-  nome: "Braz Mota",
-  creci: "CRECI 214.943",
-  telefone: "(13) 99670-0802",
-  telefoneFixo: "(13) 3302-8191",
-  whatsappNumero: "5513996700802",
-  email: "braz@vendebens.com.br",
-  instagram: "@brazmota",
-  endereco: "Rua Honduras, 855 - 5º Andar - Guilhermina, Praia Grande/SP",
+// DADOS DO MR. SITES
+const WALTER = {
+  nome: "Walter Araujo",
+  apelido: "Mr. Sites",
+  titulo: "O Guru da Criação de Sites",
+  telefone: "(11) 99999-0001",
+  whatsappNumero: "5511999990001",
+  email: "walter@mrsites.com.br",
+  instagram: "@mrsites",
+  endereco: "Atendimento 100% online — Brasil inteiro",
 };
 
 const waLink = (msg: string) =>
-  `https://wa.me/${BRAZ.whatsappNumero}?text=${encodeURIComponent(msg)}`;
+  `https://wa.me/${WALTER.whatsappNumero}?text=${encodeURIComponent(msg)}`;
 
 const CTAWhats = ({ children, message, className = "", size = "md" }: { children: React.ReactNode; message: string; className?: string; size?: "sm" | "md" | "lg" }) => {
   const sizes = {
@@ -46,22 +46,22 @@ const Section = ({ id, children, className = "" }: { id?: string; children: Reac
 );
 
 const Index = () => {
-  const mensagemPadrao = "Olá Braz! Vi o site e quero informações sobre galpão em Praia Grande.";
+  const mensagemPadrao = "Olá Walter! Vi o site do Mr. Sites e quero criar meu site com chat inteligente.";
 
   return (
     <div className="min-h-screen bg-background">
-      {/* TOP BAR URGENTE */}
-      <div className="bg-destructive text-destructive-foreground text-xs md:text-sm font-bold overflow-hidden border-b-2 border-foreground">
+      {/* TOP BAR URGENTE NEON */}
+      <div className="bg-accent text-accent-foreground text-xs md:text-sm font-bold overflow-hidden border-b-2 border-foreground">
         <div className="flex animate-marquee whitespace-nowrap py-2">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-8 px-4 shrink-0">
-              <span className="flex items-center gap-2"><AlertTriangle className="w-4 h-4" /> ATENÇÃO: Galpões disponíveis SAINDO RÁPIDO na Marginal da Piaçaguera</span>
+              <span className="flex items-center gap-2"><AlertTriangle className="w-4 h-4" /> ATENÇÃO: vagas de criação de site SAINDO RÁPIDO essa semana</span>
               <span>•</span>
-              <span>Av. Kennedy: só restam 3 pontos comerciais</span>
+              <span>Seu primeiro site no ar em 7 dias</span>
               <span>•</span>
-              <span>Ligue AGORA com o Braz: {BRAZ.telefone}</span>
+              <span>Chat com IA que vende 24h: GRÁTIS no plano</span>
               <span>•</span>
-              <span className="flex items-center gap-2"><Zap className="w-4 h-4" /> Resposta em até 5 minutos no WhatsApp</span>
+              <span className="flex items-center gap-2"><Zap className="w-4 h-4" /> Resposta em 5 minutos no WhatsApp do Mr. Sites</span>
               <span>•</span>
             </div>
           ))}
@@ -72,14 +72,14 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-foreground text-primary border-b-4 border-primary">
         <div className="container mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary text-primary-foreground flex items-center justify-center font-black text-xl border-2 border-primary">G</div>
+            <div className="w-10 h-10 bg-gradient-vapor text-primary-foreground flex items-center justify-center font-black text-xl border-2 border-primary">M</div>
             <div>
-              <div className="font-black text-sm md:text-base leading-tight">GALPÃO EM PRAIA GRANDE</div>
-              <div className="text-[10px] md:text-xs text-primary/70 font-medium">com Corretor Braz • {BRAZ.creci}</div>
+              <div className="font-black text-sm md:text-base leading-tight">MR. SITES — WALTER ARAUJO</div>
+              <div className="text-[10px] md:text-xs text-[hsl(var(--cyan-neon))] font-medium">O Guru da Criação de Sites • IA + SEO</div>
             </div>
           </a>
           <CTAWhats size="sm" message={mensagemPadrao} className="hidden md:inline-flex">
-            FALAR NO WHATS
+            QUERO MEU SITE
           </CTAWhats>
           <a href={waLink(mensagemPadrao)} target="_blank" rel="noopener noreferrer" className="md:hidden bg-whatsapp text-whatsapp-foreground p-2 border-2 border-primary">
             <MessageCircle className="w-5 h-5" />
@@ -88,167 +88,148 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section className="relative bg-background overflow-hidden border-b-4 border-foreground">
-        <img src={heroImg} alt="Galpão logístico em Praia Grande SP na marginal da expressa sul" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+      <section className="relative bg-foreground overflow-hidden border-b-4 border-foreground">
+        <img src={heroImg} alt="Walter Araujo Mr. Sites — guru de criação de sites com chat inteligente IA 24/7" className="absolute inset-0 w-full h-full object-cover opacity-70" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/85 to-foreground/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent" />
         <div className="relative container mx-auto max-w-6xl px-4 py-20 md:py-32">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 font-black text-xs md:text-sm uppercase mb-6 border-2 border-foreground shadow-bold">
-              <Star className="w-4 h-4 fill-current" /> Melhor Chamar o Braz!
+            <div className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 font-black text-xs md:text-sm uppercase mb-6 border-2 border-foreground shadow-bold-magenta">
+              <Sparkles className="w-4 h-4 fill-current" /> Melhor Chamar o Mr. Sites!
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 uppercase text-foreground">
-              Galpão para Alugar em <span className="bg-primary text-primary-foreground px-2 inline-block">Praia Grande SP</span> — Marginal Sul, Av. Kennedy e Zona Industrial
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 uppercase text-primary">
+              Sites <span className="bg-accent text-accent-foreground px-2 inline-block">Que Realmente Funcionam</span> Com Chat Inteligente Que Vende <span className="bg-[hsl(var(--neon-green))] text-[hsl(var(--neon-green-foreground))] px-2 inline-block">24/7</span>
             </h1>
-            <p className="text-lg md:text-xl text-foreground/80 mb-8 leading-relaxed max-w-2xl font-medium">
-              Você precisa de um <strong>galpão logístico, industrial ou ponto comercial em Praia Grande</strong>? Na continuação da Rodovia dos Imigrantes, na Marginal da Piaçaguera ou na Avenida Kennedy? Eu, <strong>corretor Braz Mota</strong>, resolvo pra você. Rápido, sem enrolação e com os melhores contratos da Baixada Santista.
+            <p className="text-lg md:text-xl text-primary/90 mb-8 leading-relaxed max-w-2xl font-medium">
+              Você quer seu <strong className="text-[hsl(var(--cyan-neon))]">primeiro site</strong>, um <strong className="text-[hsl(var(--cyan-neon))]">site rápido</strong>, profissional, ranqueado no <strong className="text-[hsl(var(--neon-green))]">Google e no ChatGPT</strong>, com um <strong className="text-accent">chatbot inteligente que conversa com seus clientes e fecha venda</strong> enquanto você dorme? Eu, <strong className="text-primary">Walter Araujo, o Mr. Sites</strong>, faço pra você. Rápido, sem enrolação, com tecnologia de ponta.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <CTAWhats size="lg" message={`${mensagemPadrao} Tenho interesse em galpões na Marginal/Av. Kennedy.`} className="animate-pulse-urgent">
-                QUERO FALAR COM O BRAZ AGORA
+              <CTAWhats size="lg" message={`${mensagemPadrao} Quero ver os planos.`} className="animate-pulse-urgent">
+                QUERO MEU SITE COM IA
               </CTAWhats>
-              <a href={`tel:+5513996700802`} className="inline-flex items-center gap-3 bg-foreground text-primary font-black uppercase px-8 py-6 border-2 border-foreground shadow-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-smooth">
-                <Phone className="w-5 h-5" /> {BRAZ.telefone}
+              <a href={`tel:+5511999990001`} className="inline-flex items-center gap-3 bg-[hsl(var(--cyan-neon))] text-[hsl(var(--cyan-neon-foreground))] font-black uppercase px-8 py-6 border-2 border-foreground shadow-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-smooth">
+                <Phone className="w-5 h-5" /> {WALTER.telefone}
               </a>
             </div>
-            <div className="flex flex-wrap gap-6 text-sm text-foreground/80 font-semibold">
-              <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Resposta em 5 minutos</div>
-              <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> {BRAZ.creci}</div>
-              <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Compra • Venda • Aluga • Permuta</div>
+            <div className="flex flex-wrap gap-6 text-sm text-primary/80 font-semibold">
+              <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[hsl(var(--neon-green))]" /> No ar em 7 dias</div>
+              <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent" /> Chat IA 24h incluso</div>
+              <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[hsl(var(--cyan-neon))]" /> SEO Google + ChatGPT</div>
             </div>
           </div>
         </div>
-        <div className="tape h-4 w-full relative" aria-hidden />
+        <div className="tape-neon h-4 w-full relative" aria-hidden />
       </section>
 
-      {/* BENEFÍCIOS RÁPIDOS */}
-      <Section className="bg-primary text-primary-foreground border-b-4 border-foreground">
+      {/* BENEFÍCIOS RÁPIDOS — 4 CORES NEON */}
+      <Section className="bg-foreground border-b-4 border-foreground">
         <div className="grid md:grid-cols-4 gap-6">
           {[
-            { icon: Clock, title: "Resposta em 5min", desc: "Mandou mensagem, Braz responde. Fim." },
-            { icon: Shield, title: "Contratos Blindados", desc: "Seu aluguel, seu CNPJ, seu pescoço. Protegidos." },
-            { icon: TrendingUp, title: "Melhor m² da Região", desc: "Marginal Sul e Kennedy com preço que fecha." },
-            { icon: MapPin, title: "Só Praia Grande SP", desc: "Eu conheço cada rua. Literalmente." },
+            { icon: Rocket, title: "Site no Ar em 7 Dias", desc: "Mandou os textos, Mr. Sites coloca no ar. Fim.", cls: "bg-primary text-primary-foreground" },
+            { icon: Bot, title: "Chat IA 24/7", desc: "Robô inteligente conversa, qualifica e fecha venda.", cls: "bg-accent text-accent-foreground" },
+            { icon: Search, title: "SEO Google + ChatGPT", desc: "Você aparece quando o cliente procura. E quando a IA responde.", cls: "bg-cyan-neon text-cyan-neon-foreground" },
+            { icon: TrendingUp, title: "Site Que Vende", desc: "Não é cartão de visita. É máquina de gerar cliente.", cls: "bg-neon-green text-neon-green-foreground" },
           ].map((b, i) => (
-            <div key={i} className="bg-foreground text-primary p-6 border-2 border-foreground shadow-bold-yellow">
-              <b.icon className="w-10 h-10 mb-3 text-primary" strokeWidth={2} />
+            <div key={i} className={`${b.cls} p-6 border-2 border-primary shadow-bold-yellow`}>
+              <b.icon className="w-10 h-10 mb-3" strokeWidth={2} />
               <h3 className="font-black text-xl uppercase mb-2">{b.title}</h3>
-              <p className="text-primary/80 text-sm">{b.desc}</p>
+              <p className="opacity-80 text-sm">{b.desc}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* SOBRE - INTRODUÇÃO SEO */}
+      {/* SOBRE — APRESENTAÇÃO MR SITES */}
       <Section>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-block bg-primary text-primary-foreground px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-foreground">O Especialista</div>
+            <div className="inline-block bg-accent text-accent-foreground px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-foreground">O Guru</div>
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-6 leading-tight">
-              Precisa de um Galpão em Praia Grande? <span className="text-accent">Melhor Chamar o Braz.</span>
+              Precisa de Site? <span className="text-accent">Melhor Chamar o Mr. Sites.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              Se você está procurando <strong>galpão para alugar em Praia Grande</strong>, ponto comercial estratégico na <strong>Avenida Kennedy</strong>, depósito logístico na <strong>marginal da expressa sul</strong> (continuação da Rodovia dos Imigrantes) ou espaço industrial em zonas comerciais da cidade — você chegou no lugar certo. Eu sou o <strong>Braz, corretor de imóveis comerciais em Praia Grande SP</strong> com mais de uma década fechando negócios na Baixada Santista.
+              Se você está procurando <strong>criação de site profissional</strong>, quer fazer seu <strong>primeiro site</strong>, precisa de um <strong>site rápido que carrega em 1 segundo</strong>, ou já tem um site que <strong>não funciona, não aparece no Google e não traz cliente nenhum</strong> — você chegou no lugar certo. Eu sou o <strong>Walter Araujo, o Mr. Sites</strong>, especialista em desenvolvimento web, SEO e inteligência artificial aplicada a vendas.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Locação de galpões logísticos, aluguel de galpões industriais, venda de pontos comerciais, terrenos para construção de centros de distribuição, lojas de rua, salões comerciais em avenidas movimentadas, espaços para indústria leve e pesada, e-commerce, transportadoras, oficinas, distribuidoras. Se o negócio é em <strong>Praia Grande</strong>, eu tenho o imóvel. E se ainda não tenho, eu acho em 48 horas.
+              Crio <strong>sites institucionais, landing pages, sites para empresa, lojas virtuais, sites para profissional liberal, sites para clínica, sites para advogado, sites para restaurante, sites para imobiliária</strong> — todos com <strong className="text-accent">chat inteligente integrado que conversa com o visitante, qualifica o lead e fecha venda 24 horas por dia, 7 dias por semana</strong>. Sem você precisar responder mensagem na madrugada.
             </p>
-            <CTAWhats size="lg" message={`${mensagemPadrao} Quero conhecer o portfólio do Braz.`}>
-              Quero Ver Os Galpões Disponíveis
+            <CTAWhats size="lg" message={`${mensagemPadrao} Quero conhecer o trabalho.`}>
+              Quero Ver O Que O Mr. Sites Faz
             </CTAWhats>
           </div>
           <div className="relative">
-            <div className="absolute -top-4 -left-4 bg-primary text-primary-foreground px-6 py-3 font-black uppercase z-10 border-2 border-foreground shadow-bold rotate-[-3deg]">
-              Corretor Braz
+            <div className="absolute -top-4 -left-4 bg-accent text-accent-foreground px-6 py-3 font-black uppercase z-10 border-2 border-foreground shadow-bold rotate-[-3deg]">
+              Mr. Sites
             </div>
-            <img src={brazImg} alt="Corretor Braz especialista em galpões em Praia Grande" className="w-full border-4 border-foreground shadow-bold" loading="lazy" width={1024} height={1280} />
-            <div className="absolute -bottom-4 -right-4 bg-foreground text-primary px-6 py-3 font-black uppercase border-2 border-foreground shadow-bold rotate-[2deg]">
-              {BRAZ.creci}
+            <img src={walterImg} alt="Walter Araujo Mr. Sites guru de criação de sites com inteligência artificial" className="w-full border-4 border-foreground shadow-bold-magenta" loading="lazy" width={1024} height={1280} />
+            <div className="absolute -bottom-4 -right-4 bg-[hsl(var(--neon-green))] text-[hsl(var(--neon-green-foreground))] px-6 py-3 font-black uppercase border-2 border-foreground shadow-bold rotate-[2deg]">
+              IA + SEO
             </div>
           </div>
         </div>
       </Section>
 
-      {/* REGIÕES ATENDIDAS */}
-      <Section id="regioes" className="bg-foreground text-primary">
+      {/* CHAT IA EM DESTAQUE */}
+      <Section id="chat-ia" className="bg-foreground text-primary">
         <div className="text-center mb-12">
-          <div className="inline-block bg-primary text-primary-foreground px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-primary">Territórios do Braz</div>
+          <div className="inline-block bg-[hsl(var(--neon-green))] text-[hsl(var(--neon-green-foreground))] px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-primary">A Tecnologia Que Muda Tudo</div>
           <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-4">
-            Onde Você Vai Encontrar Seu <span className="text-primary">Galpão Perfeito</span>
+            Seu Site Com <span className="text-accent">Chat Inteligente</span> Que <span className="text-[hsl(var(--cyan-neon))]">Vende Sozinho</span>
           </h2>
           <p className="text-lg text-primary/80 max-w-3xl mx-auto">
-            Esqueça a praia. Aqui o assunto é <strong>logística, indústria e comércio pesado</strong>. As regiões mais estratégicas de Praia Grande para o seu negócio decolar.
+            Esquece formulário de contato que ninguém preenche. O <strong>chatbot com IA</strong> do Mr. Sites <strong>conversa de verdade</strong> com seu visitante, entende o que ele quer, tira dúvida, mostra preço, agenda visita e <strong>fecha negócio</strong> — tudo em português, 24 horas por dia, sem você levantar um dedo.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Marginal da Expressa Sul",
-              desc: "Continuação direta da Rodovia dos Imigrantes. Galpões logísticos em Praia Grande com acesso privilegiado a São Paulo capital, ABC e Porto de Santos. Locação de galpão na marginal Piaçaguera com pé-direito alto, docas, pátio de manobra e segurança 24h. Ideal para transportadoras, distribuidoras, e-commerce, centros de distribuição (CDs) e armazéns gerais.",
-              tag: "LOGÍSTICA TOP"
-            },
-            {
-              title: "Avenida Kennedy",
-              desc: "A avenida comercial mais movimentada de Praia Grande. Pontos comerciais na Av. Kennedy para aluguel: lojas de rua, galerias, salões comerciais, espaços para franquias, clínicas, restaurantes, showrooms automotivos e conveniências. Alto fluxo de carros e pedestres, visibilidade premium para sua marca.",
-              tag: "COMÉRCIO FORTE"
-            },
-            {
-              title: "Zona Industrial de Praia Grande",
-              desc: "Galpões industriais em Praia Grande para indústria leve e pesada: metalúrgicas, confecções, alimentos, químicos leves, gráficas, marcenarias. Imóveis industriais com energia trifásica, estrutura robusta, boa pé-direito, ventilação e documentação regularizada — CAR, CVS, AVCB e alvará.",
-              tag: "INDÚSTRIA"
-            },
-            {
-              title: "Rodovia dos Imigrantes (trecho final)",
-              desc: "Aluguel de galpão na Imigrantes Praia Grande: o corredor logístico mais eficiente ligando a capital ao litoral. Imóveis com acesso direto a Cubatão, Santos, São Vicente e Mongaguá. Perfeitos para operações JIT (just in time), cross-docking e fulfillment.",
-              tag: "CORREDOR SP-LITORAL"
-            },
-            {
-              title: "Zonas Comerciais (Boqueirão, Tupi, Vila Sônia)",
-              desc: "Pontos comerciais em Praia Grande nos bairros com mais movimento de comércio local: lojas para alugar, salões térreos, depósitos urbanos, mini galpões para estoque, pet shops, materiais de construção, autopeças, supermercados de bairro e franquias.",
-              tag: "COMÉRCIO URBANO"
-            },
-            {
-              title: "Acessos Logísticos Estratégicos",
-              desc: "Galpões perto da entrada de Praia Grande, saída da Imigrantes, acesso ao Padre Manoel da Nóbrega e interligação com Guarujá via travessia. Transportadoras e empresas de entrega rápida encontram aqui a base operacional ideal para atender toda a Baixada Santista.",
-              tag: "MULTIMODAL"
-            },
-          ].map((r, i) => (
-            <div key={i} className="bg-background text-foreground p-6 border-2 border-primary shadow-bold-yellow hover:translate-x-[-4px] hover:translate-y-[-4px] transition-smooth">
-              <div className="inline-block bg-primary text-primary-foreground px-2 py-1 text-[10px] font-black uppercase mb-3 border border-foreground">{r.tag}</div>
-              <h3 className="text-xl font-black uppercase mb-3 text-foreground">{r.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
-            </div>
-          ))}
+
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <img src={chatMockupImg} alt="Mockup de site com chat inteligente IA fechando venda 24/7 — Mr. Sites" className="w-full border-4 border-[hsl(var(--cyan-neon))] shadow-bold-cyan" loading="lazy" width={1280} height={960} />
+          <div className="grid gap-4">
+            {[
+              { icon: BrainCircuit, title: "IA treinada com seu negócio", desc: "Aprende seus produtos, preços, condições, FAQ. Conversa como se fosse você." },
+              { icon: ShoppingCart, title: "Fecha venda direto no chat", desc: "Envia link de pagamento, agenda reunião, faz orçamento automático." },
+              { icon: Clock, title: "24 horas, 7 dias por semana", desc: "Cliente curioso às 3 da manhã? Já é cliente fechado às 8." },
+              { icon: BadgeCheck, title: "Integra com WhatsApp", desc: "Lead quente cai direto no seu WhatsApp pra você só passar a chave." },
+            ].map((item, i) => (
+              <div key={i} className="bg-primary text-primary-foreground p-5 border-2 border-primary shadow-bold-magenta flex gap-4">
+                <item.icon className="w-10 h-10 shrink-0" strokeWidth={2} />
+                <div>
+                  <h3 className="font-black uppercase text-lg mb-1">{item.title}</h3>
+                  <p className="text-sm opacity-85">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
         <div className="text-center mt-12">
-          <CTAWhats size="lg" message={`${mensagemPadrao} Quero galpão em região específica.`}>
-            Me Diz Qual Região Você Quer
+          <CTAWhats size="lg" message={`${mensagemPadrao} Quero o chat IA no meu site.`}>
+            Quero Esse Robô Vendendo Pra Mim
           </CTAWhats>
         </div>
       </Section>
 
-      {/* TIPOS DE IMÓVEIS */}
+      {/* TIPOS DE SITES */}
       <Section id="tipos">
         <div className="text-center mb-12">
-          <div className="inline-block bg-accent text-accent-foreground px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-foreground">Catálogo Completo</div>
+          <div className="inline-block bg-[hsl(var(--cyan-neon))] text-[hsl(var(--cyan-neon-foreground))] px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-foreground">Catálogo Completo</div>
           <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-4">
-            Todo Tipo de Galpão e Ponto Comercial em Praia Grande
+            Todo Tipo de Site Que Sua Empresa Precisa
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Do mini galpão de 200m² até o centro de distribuição de 10.000m². Do ponto comercial de esquina na Kennedy ao complexo industrial na marginal. Tá tudo aqui.
+            Do <strong>primeiro site simples e barato</strong> até o <strong>e-commerce robusto com IA</strong>. Da landing page que converte na hora ao site institucional completo. Tá tudo aqui.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {[
-            { icon: Warehouse, title: "Galpão Logístico em Praia Grande", items: ["Galpão com docas de carga e descarga", "Galpão com pé-direito alto (8m, 10m, 12m)", "Galpão com pátio de manobra para carretas", "Galpão com sistema de combate a incêndio", "Galpão para centro de distribuição (CD)", "Galpão para e-commerce e fulfillment", "Galpão para transportadora e logística reversa", "Galpão com escritório administrativo integrado"] },
-            { icon: Factory, title: "Galpão Industrial em Praia Grande", items: ["Galpão industrial com energia trifásica 220/380v", "Galpão industrial com alta carga elétrica", "Galpão para indústria química leve", "Galpão para indústria alimentícia", "Galpão para metalúrgica e usinagem", "Galpão para confecção e têxtil", "Galpão com AVCB e alvará de funcionamento", "Galpão industrial com laudo ambiental regularizado"] },
-            { icon: Store, title: "Pontos Comerciais em Praia Grande", items: ["Loja de rua na Avenida Kennedy", "Salão comercial térreo com vitrine", "Ponto para franquia de fast food", "Ponto para clínica médica e odontológica", "Ponto para academia e estúdio fitness", "Ponto para supermercado e mercado de bairro", "Ponto para loja de materiais de construção", "Ponto para concessionária e showroom automotivo"] },
-            { icon: Truck, title: "Terrenos e Áreas Industriais", items: ["Terreno industrial em Praia Grande para construção", "Terreno comercial na Av. Kennedy", "Área para built-to-suit (BTS)", "Gleba para galpão logístico sob medida", "Terreno com zoneamento industrial", "Terreno com acesso para carretas", "Área para pátio de containers e estacionamento", "Lote para posto de combustível e conveniência"] },
+            { icon: Globe, title: "Site Institucional Profissional", boxCls: "bg-primary text-primary-foreground", checkCls: "text-primary", items: ["Site profissional para empresa", "Site rápido que carrega em 1 segundo", "Site responsivo (celular, tablet, desktop)", "Design moderno e personalizado", "Páginas: Home, Sobre, Serviços, Contato, Blog", "Hospedagem inclusa e domínio configurado", "Certificado SSL (cadeado verde)", "Painel para você editar textos sem programador"] },
+            { icon: MousePointerClick, title: "Landing Page Que Converte", boxCls: "bg-accent text-accent-foreground", checkCls: "text-accent", items: ["Landing page para captar lead", "Página de vendas com copy persuasivo", "Botão WhatsApp flutuante", "Formulário inteligente integrado ao seu CRM", "Pixel Facebook, Google Ads e TikTok", "Otimizada para anúncios pagos", "Carregamento ultra-rápido (Core Web Vitals 100)", "A/B test e analytics configurado"] },
+            { icon: ShoppingCart, title: "E-commerce e Loja Virtual", boxCls: "bg-cyan-neon text-cyan-neon-foreground", checkCls: "text-cyan-neon", items: ["Loja virtual completa", "Pagamento Pix, cartão, boleto", "Integração com Correios e transportadoras", "Carrinho abandonado com recuperação por IA", "Catálogo de produtos ilimitado", "Cupons de desconto", "Avaliações de clientes", "Painel administrativo simples"] },
+            { icon: Bot, title: "Site com Chat IA Avançado", boxCls: "bg-neon-green text-neon-green-foreground", checkCls: "text-neon-green", items: ["Chatbot com inteligência artificial", "Atendimento automático 24/7", "Qualificação de leads em tempo real", "Agendamento automático de reuniões", "Envio de orçamento na hora", "Integração com WhatsApp Business API", "Memória de conversas anteriores", "Treinamento personalizado pra sua empresa"] },
           ].map((cat, i) => (
             <div key={i} className="bg-background border-2 border-foreground shadow-bold p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-primary text-primary-foreground p-3 border-2 border-foreground">
+                <div className={`${cat.boxCls} p-3 border-2 border-foreground`}>
                   <cat.icon className="w-6 h-6" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-xl md:text-2xl font-black uppercase">{cat.title}</h3>
@@ -256,99 +237,107 @@ const Index = () => {
               <ul className="space-y-2">
                 {cat.items.map((it, j) => (
                   <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <CheckCircle2 className={`w-4 h-4 ${cat.checkCls} shrink-0 mt-0.5`} />
                     <span>{it}</span>
                   </li>
                 ))}
               </ul>
               <CTAWhats size="sm" message={`${mensagemPadrao} Interesse: ${cat.title}.`} className="mt-5 w-full justify-center">
-                Quero Esse Tipo
+                Quero Esse Site
               </CTAWhats>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* FAIXA CHAMATIVA */}
-      <div className="bg-gradient-urgent py-8 border-y-4 border-foreground">
+      {/* FAIXA NEON CHAMATIVA */}
+      <div className="bg-gradient-neon py-8 border-y-4 border-foreground">
         <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-foreground">
-            <h3 className="text-2xl md:text-4xl font-black uppercase leading-tight">Tá Na Dúvida? <span className="block md:inline">Liga pro Braz.</span></h3>
-            <p className="font-bold">Análise do seu perfil + sugestão do galpão ideal. Sem compromisso.</p>
+            <h3 className="text-2xl md:text-4xl font-black uppercase leading-tight">Tá Sem Site? <span className="block md:inline">Liga pro Mr. Sites.</span></h3>
+            <p className="font-bold">Análise grátis do seu negócio + proposta de site com IA. Sem compromisso.</p>
           </div>
           <CTAWhats size="lg" message={`${mensagemPadrao} Quero análise gratuita.`} className="animate-pulse-urgent">
-            CHAMAR O BRAZ AGORA
+            CHAMAR O MR. SITES
           </CTAWhats>
         </div>
       </div>
 
-      {/* SEÇÃO TEXTO SEO MASSIVO */}
+      {/* CONTEÚDO SEO MASSIVO */}
       <Section id="conteudo" className="bg-muted">
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <img src={internoImg} alt="Interior de galpão logístico para alugar em Praia Grande na marginal" className="w-full h-64 object-cover border-2 border-foreground shadow-bold" loading="lazy" width={1280} height={960} />
-          <img src={marginalImg} alt="Galpão na marginal da Rodovia dos Imigrantes Praia Grande" className="w-full h-64 object-cover border-2 border-foreground shadow-bold" loading="lazy" width={1280} height={800} />
-          <img src={heroImg} alt="Zona industrial de Praia Grande vista aérea com galpões" className="w-full h-64 object-cover border-2 border-foreground shadow-bold" loading="lazy" width={1920} height={1080} />
+          <img src={chatMockupImg} alt="Site profissional com chat inteligente IA criado pelo Mr. Sites" className="w-full h-64 object-cover border-2 border-accent shadow-bold-magenta" loading="lazy" width={1280} height={960} />
+          <img src={neonBgImg} alt="Tecnologia de criação de sites rápidos com SEO Google e ChatGPT" className="w-full h-64 object-cover border-2 border-[hsl(var(--cyan-neon))] shadow-bold-cyan" loading="lazy" width={1920} height={1080} />
+          <img src={walterPhoneImg} alt="Walter Araujo Mr. Sites mostrando site com chatbot que vende 24/7" className="w-full h-64 object-cover border-2 border-[hsl(var(--neon-green))] shadow-bold-green" loading="lazy" width={1024} height={1280} />
         </div>
 
         <article className="prose prose-lg max-w-none text-foreground">
-          <h2 className="text-3xl md:text-4xl font-black uppercase mb-6">Por Que Alugar Galpão em Praia Grande SP É o Melhor Negócio da Baixada Santista</h2>
+          <h2 className="text-3xl md:text-4xl font-black uppercase mb-6">Por Que Ter um Site Profissional Com Chat Inteligente É o Melhor Investimento Que Você Faz Esse Ano</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            <strong>Praia Grande</strong> deixou de ser só a cidade do verão e virou um dos polos logísticos e comerciais mais estratégicos do litoral paulista. Com acesso direto pela <strong>Rodovia dos Imigrantes</strong>, ligação com Santos, Cubatão, São Vicente, Mongaguá e Itanhaém, e uma malha viária que inclui a <strong>marginal da expressa sul</strong>, a <strong>Avenida Kennedy</strong> e a <strong>Avenida Presidente Castelo Branco</strong>, a cidade se consolidou como endereço obrigatório para quem precisa de um <strong>galpão logístico, industrial ou ponto comercial</strong> de alto padrão. Se você quer <strong>alugar galpão em Praia Grande</strong>, precisa falar com quem conhece cada metro quadrado: o corretor Braz.
+            Em 2026, ter um <strong>site profissional</strong> não é mais luxo, é sobrevivência. Quem não aparece no <strong>Google</strong>, no <strong>ChatGPT</strong>, no <strong>Perplexity</strong>, no <strong>Bing IA</strong>, no <strong>Gemini</strong> e nas demais ferramentas de busca por inteligência artificial — simplesmente não existe pro cliente moderno. E quem tem site mas o site é <strong>lento, feio, não funciona no celular, não tem chat, não converte visita em venda</strong> — está pior ainda, porque está pagando hospedagem pra perder cliente. É exatamente aí que entra o <strong>Mr. Sites</strong>, o guru da <strong>criação de sites rápidos, profissionais e que realmente funcionam</strong>.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            A demanda por <strong>galpões para aluguel em Praia Grande</strong> explodiu nos últimos anos com o crescimento do e-commerce, das transportadoras que atendem o Porto de Santos e da expansão das indústrias leves na Baixada Santista. Empresas como transportadoras, distribuidoras, operadores logísticos 3PL, centros de distribuição regionais, fulfillment de marketplaces, indústrias de alimentos, confecções e metalúrgicas procuram <strong>galpões na marginal da Piaçaguera</strong>, <strong>galpões na continuação da Imigrantes</strong> e <strong>galpões na Av. Kennedy</strong> porque essas regiões oferecem o equilíbrio perfeito entre custo de locação, acesso rodoviário, disponibilidade de mão de obra e segurança patrimonial.
-          </p>
-
-          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Galpão Logístico em Praia Grande: Marginal da Expressa Sul é Referência</h3>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            A <strong>marginal da expressa sul em Praia Grande</strong>, que é a continuação natural da <strong>Rodovia dos Imigrantes</strong> em direção ao litoral, é hoje o corredor logístico mais cobiçado da região. <strong>Galpões para alugar na marginal Imigrantes Praia Grande</strong> oferecem docas niveladas, pé-direito alto (de 8 a 12 metros), pátio para manobra de carretas 45 pés, portaria 24h, sistema de combate a incêndio (sprinklers), AVCB regularizado, energia trifásica de alta carga, escritórios administrativos integrados e total flexibilidade de layout. É o tipo de <strong>aluguel de galpão em Praia Grande</strong> ideal para centros de distribuição, operadores logísticos, transportadoras rodoviárias, e-commerce e empresas de fulfillment que atendem Santos, Guarujá, São Vicente, Praia Grande e o ABC paulista.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Entre os principais diferenciais dos <strong>galpões na marginal Piaçaguera</strong> estão: proximidade imediata com o <strong>Porto de Santos</strong> (um dos maiores da América Latina), acesso direto ao sistema Anchieta-Imigrantes, ligação com a Rodovia Padre Manoel da Nóbrega rumo ao sul do litoral, estacionamento amplo para frota, instalações prontas para operação 24 horas e contratos de locação flexíveis (típicos e atípicos build-to-suit). O <strong>corretor Braz</strong> trabalha com proprietários diretos de <strong>galpões na Imigrantes Praia Grande</strong> e consegue condições que portais comuns de imóveis não oferecem.
+            A demanda por <strong>desenvolvimento de sites profissionais</strong> explodiu nos últimos anos com a chegada da inteligência artificial, dos assistentes virtuais, dos chatbots conversacionais e da nova realidade do marketing digital. Empresas como advogados, médicos, dentistas, clínicas, psicólogos, nutricionistas, personal trainers, consultores, contadores, arquitetos, designers, fotógrafos, restaurantes, lojas, distribuidoras, indústrias, imobiliárias, corretores, autônomos, infoprodutores, coaches, mentores, agências, startups, profissionais liberais e até influenciadores procuram <strong>criar site profissional rápido</strong>, <strong>fazer primeiro site</strong>, <strong>contratar agência de criação de sites</strong> ou <strong>desenvolvedor freelancer de site</strong> porque entenderam: site bom é máquina de cliente.
           </p>
 
-          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Ponto Comercial na Avenida Kennedy: Visibilidade Que Vende Sozinha</h3>
+          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Site Rápido: Por Que Velocidade É Tudo no Google e no ChatGPT</h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            A <strong>Avenida Kennedy em Praia Grande</strong> é a artéria comercial mais importante da cidade. Alugar um <strong>ponto comercial na Av. Kennedy Praia Grande</strong> significa colocar sua marca na rota diária de milhares de moradores e visitantes. <strong>Lojas para alugar na Kennedy</strong>, <strong>salões comerciais na Avenida Kennedy</strong>, <strong>pontos para franquia na Kennedy Praia Grande</strong>, espaços para clínicas, academias, restaurantes, cafeterias, pet shops, lojas de materiais de construção, autopeças, concessionárias, escolas de idiomas, franquias de fast food e centros médicos — tudo isso está disponível no portfólio do Braz.
+            <strong>Site rápido</strong> não é vaidade técnica, é sobrevivência. O Google penaliza site lento desde 2018 com o <strong>Core Web Vitals</strong>. ChatGPT e Perplexity preferem citar fontes que carregam instantaneamente. Visitante que espera mais de 3 segundos pra carregar — vai embora e não volta nunca mais. O <strong>Mr. Sites</strong> entrega <strong>sites com pontuação 100/100 no PageSpeed Insights</strong>, <strong>imagens otimizadas em WebP e AVIF</strong>, <strong>cache inteligente</strong>, <strong>CDN global</strong>, <strong>código limpo sem plugins inúteis</strong>, <strong>servidor profissional brasileiro</strong>. Resultado: seu site abre em menos de 1 segundo no celular do seu cliente, mesmo na pior internet.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Além da Kennedy, Praia Grande tem outras zonas comerciais fortes: <strong>Avenida Presidente Castelo Branco</strong>, <strong>Avenida Brasil</strong>, bairros comerciais como <strong>Boqueirão, Tupi, Vila Sônia, Mirim, Guilhermina, Ocian, Antártica, Caiçara, Real e Solemar</strong>, onde também é possível alugar <strong>salas comerciais</strong>, <strong>lojas térreas</strong>, <strong>salões de esquina</strong> e <strong>mini galpões urbanos</strong> para estoque de pequenas empresas e distribuidoras locais.
-          </p>
-
-          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Galpão Industrial em Praia Grande: Infraestrutura Pronta Para Produzir</h3>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Para quem busca <strong>galpão industrial para alugar em Praia Grande</strong>, a cidade oferece áreas com zoneamento apropriado, infraestrutura elétrica robusta (trifásica 220/380v, subestações próprias), abastecimento de água industrial, rede de esgoto, facilidade de licenciamento ambiental (CETESB) e proximidade com a mão de obra qualificada da Baixada Santista. <strong>Galpões industriais em Praia Grande SP</strong> atendem metalúrgicas, indústrias alimentícias, confecções, gráficas, marcenarias, fábricas de embalagens, envase, montadoras de móveis planejados, indústria náutica (produtos para esporte e lazer marítimo) e muito mais.
+            Diferente de <strong>construtor de site genérico</strong> tipo Wix, Webflow básico, Wordpress entupido de plugin ou aquele <strong>site barato feito por sobrinho</strong> que parece template de 2010, o Mr. Sites desenvolve com tecnologia de ponta: <strong>React, Next.js, Astro, Vite, Tailwind CSS, TypeScript</strong>. Resultado profissional, código limpo, manutenção fácil, escalabilidade garantida. <strong>Site moderno, site bonito, site rápido, site seguro, site que dá orgulho de mostrar pro cliente</strong>.
           </p>
 
-          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Por Que Falar Com o Corretor Braz Antes de Qualquer Portal de Imóveis</h3>
+          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Chatbot Inteligente: O Vendedor Que Não Dorme, Não Falta e Não Pede Aumento</h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Portal de imóveis mostra o que todo mundo já viu. O <strong>Braz</strong> mostra o que ninguém mostra: o <strong>galpão em Praia Grande</strong> que o proprietário ainda nem anunciou, o <strong>ponto comercial na Kennedy</strong> que vai vencer contrato em 30 dias, o <strong>galpão logístico na marginal</strong> que vai entrar em reforma e pode ser alugado pronto pra você. Informação privilegiada, rede de relacionamento consolidada com proprietários, construtores, advogados imobiliários, despachantes e contadores. É assim que se fecha negócio bom na <strong>Baixada Santista</strong>.
+            A grande revolução de 2025/2026 nos sites é a <strong>integração de inteligência artificial conversacional</strong>. O <strong>chatbot com IA</strong> que o Mr. Sites instala no seu site não é aquele bot bobo de palavra-chave que responde tudo errado. É um <strong>assistente virtual treinado especificamente com o conteúdo da sua empresa</strong> — seus produtos, seus preços, suas condições de pagamento, seu horário de atendimento, sua política de garantia, seu FAQ, seu portfólio. Ele conversa em <strong>português natural</strong>, entende contexto, lembra do que o cliente falou antes, faz perguntas inteligentes, tira objeção, mostra benefício, oferece desconto e <strong>fecha venda direto no chat</strong> — enviando link de pagamento, agendando reunião no Google Calendar, criando orçamento em PDF, encaminhando o lead quente direto pro seu WhatsApp.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Com mais de dez anos no mercado imobiliário de Praia Grande e região, o <strong>corretor Braz</strong> é o especialista em <strong>locação de galpões em Praia Grande</strong>, <strong>venda de galpões em Praia Grande</strong>, <strong>aluguel de pontos comerciais em Praia Grande</strong> e intermediação de <strong>terrenos industriais em Praia Grande</strong>. Registro {BRAZ.creci}. Atendimento pessoal, resposta rápida pelo WhatsApp, visita guiada ao imóvel, análise documental completa (matrícula atualizada, IPTU, habite-se, AVCB, alvará, laudo ambiental) e acompanhamento da negociação até a assinatura do contrato. Do primeiro "oi" até a chave na sua mão.
-          </p>
-
-          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Mercado Imobiliário Comercial e Industrial em Praia Grande: O Cenário Atual</h3>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            O preço médio do <strong>aluguel de galpão em Praia Grande</strong> varia conforme localização, metragem, pé-direito, ano de construção, instalações disponíveis e tipo de contrato. Galpões na <strong>marginal da expressa sul</strong> tendem a ter valor de m² superior aos galpões em bairros industriais mais afastados, justamente pela logística privilegiada. Pontos comerciais na <strong>Av. Kennedy</strong> também praticam valores premium em função da visibilidade e do fluxo de pessoas. Por outro lado, bairros como Vila Sônia, Tupi, Boqueirão e Caiçara oferecem opções mais acessíveis de <strong>salões comerciais e mini galpões</strong> para empresas em início de expansão.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            A previsão do mercado para os próximos anos é de valorização contínua dos <strong>imóveis comerciais e industriais em Praia Grande</strong>, impulsionada pelo crescimento do e-commerce brasileiro, pela expansão do Porto de Santos, pelas obras de duplicação da Padre Manoel da Nóbrega, pela nova travessia Santos-Guarujá e pelo aumento da demanda por centros de distribuição regionais que atendam a Baixada Santista e o Vale do Ribeira. Quem alugar agora vai pagar menos. Quem deixar para o ano que vem vai bater no peito. Fica a dica do Braz.
+            <strong>Atendimento 24 horas por dia, 7 dias por semana, 365 dias por ano</strong>. Domingo de Páscoa às 4 da manhã, se um cliente entra no seu site procurando seu produto — o chat IA atende, conversa, vende. Você acorda segunda-feira com o pedido fechado, o pagamento aprovado e o cliente esperando você só confirmar a entrega. <strong>É site que trabalha enquanto você dorme</strong>. É a tecnologia que separa o profissional do amador, o negócio que escala do negócio que estagna.
           </p>
 
-          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Termos Que Você Provavelmente Procurou no Google — e Aqui Tem Tudo</h3>
+          <h3 className="text-2xl font-black uppercase mt-8 mb-4">SEO Para Google E SEO Para ChatGPT: A Nova Era da Busca</h3>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            <strong>SEO (Search Engine Optimization)</strong> não é mais só sobre aparecer no Google. É sobre aparecer também no <strong>ChatGPT, Perplexity, Claude, Gemini, Bing Chat, Copilot, You.com, Brave Search</strong> e em todas as ferramentas de busca por inteligência artificial que estão dominando a forma como as pessoas pesquisam. O <strong>GEO (Generative Engine Optimization)</strong> e o <strong>AEO (Answer Engine Optimization)</strong> são as novas fronteiras do marketing digital — e o Mr. Sites já trabalha com isso há tempos.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Todo site entregue pelo <strong>Mr. Sites</strong> sai com: <strong>schema markup JSON-LD completo</strong> (organização, produtos, FAQ, breadcrumb, artigo), <strong>meta tags otimizadas</strong>, <strong>Open Graph e Twitter Cards</strong>, <strong>sitemap.xml e robots.txt</strong> configurados, <strong>URLs amigáveis e canônicas</strong>, <strong>tags H1, H2, H3 hierárquicas</strong>, <strong>alt text descritivo em todas as imagens</strong>, <strong>conteúdo otimizado para palavras-chave de cauda longa</strong>, <strong>blog integrado para autoridade temática</strong>, <strong>linkagem interna estratégica</strong>, <strong>velocidade de carregamento perfeita</strong>, <strong>mobile-first design</strong>, <strong>HTTPS com SSL</strong>, <strong>integração Google Analytics 4 e Search Console</strong>. Tudo o que o Google ama. Tudo o que o ChatGPT cita.
+          </p>
+
+          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Primeiro Site? Mr. Sites Faz Sem Drama</h3>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Se você nunca teve site, sente medo de "tecnologia", acha que vai ser caro, demorado, complicado — relaxa. O Mr. Sites é especialista em <strong>fazer primeiro site para iniciante</strong>. Processo simples: você manda um áudio no WhatsApp contando o que faz, pra quem vende, qual o objetivo do site. O Walter (Mr. Sites) define junto com você as páginas, as cores, o estilo. Em 7 dias úteis seu <strong>primeiro site profissional está no ar</strong>, com domínio próprio (seunegocio.com.br), e-mail profissional (contato@seunegocio.com.br), hospedagem inclusa no primeiro ano, chat inteligente já treinado e pronto pra atender. Sem dor de cabeça, sem complicação, sem você precisar entender de nada técnico.
+          </p>
+
+          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Por Que Falar Com o Mr. Sites Antes de Qualquer Construtor de Site Genérico</h3>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Construtor de site (Wix, Squarespace, Webflow básico, Wordpress.com) entrega o que todo mundo já tem: site lento, template repetido, limitado, dependente da plataforma. Quando você quer crescer, descobre que tá preso. O <strong>Mr. Sites</strong> entrega o que ninguém mostra: <strong>site sob medida</strong>, com a sua identidade visual, com o seu chat IA, com o seu SEO específico, com a sua integração com WhatsApp, Instagram, TikTok, Google Meu Negócio, Pix, Stripe, Asaas, Mercado Pago, RD Station, ActiveCampaign, HubSpot. Tudo conversando entre si. Tudo gerando dados. Tudo gerando venda.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Mais de uma década criando sites que vendem para empresas de todos os portes — do MEI iniciante à média empresa em expansão. <strong>Walter Araujo</strong>, conhecido como <strong>Mr. Sites</strong>, é especialista em <strong>criação de sites profissionais</strong>, <strong>desenvolvimento web</strong>, <strong>landing pages de alta conversão</strong>, <strong>SEO técnico e de conteúdo</strong>, <strong>integração de chatbots com inteligência artificial</strong>, <strong>otimização para mecanismos generativos (GEO/AEO)</strong>, <strong>e-commerce</strong>, <strong>automação de marketing</strong> e <strong>tráfego pago</strong>. Atendimento direto, sem secretária, sem proposta enrolada de 40 páginas. WhatsApp aberto, resposta em 5 minutos, do primeiro "oi" até a chave do site na sua mão.
+          </p>
+
+          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Quanto Custa Fazer um Site com o Mr. Sites? O Cenário Real</h3>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            O preço de um <strong>site profissional</strong> varia conforme o tipo, a quantidade de páginas, as integrações necessárias, o nível de personalização e se inclui ou não o <strong>chat com inteligência artificial</strong>. Landing pages simples saem mais em conta. Sites institucionais com 5 a 10 páginas e chat IA têm valor intermediário. E-commerces completos com automação são investimentos maiores — mas se pagam no primeiro mês de operação. O Mr. Sites oferece <strong>planos mensais acessíveis</strong> que incluem hospedagem, manutenção, atualizações, suporte e o chat IA treinado — sem você precisar pagar tudo de uma vez. Trabalha também com <strong>pacotes fechados</strong> pra quem prefere comprar e ficar dono do site.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            A previsão para os próximos anos é de <strong>valorização contínua dos serviços de criação de sites com IA</strong>, conforme as empresas vão entendendo que <strong>chatbot que vende vale mais que vendedor humano em vários cenários</strong>. Quem investir agora vai pagar menos. Quem deixar pro ano que vem vai bater no peito vendo o concorrente faturar com site que ele não tem. <strong>Fica a dica do Mr. Sites</strong>.
+          </p>
+
+          <h3 className="text-2xl font-black uppercase mt-8 mb-4">Termos Que Você Provavelmente Procurou no Google e no ChatGPT — Aqui Tem Tudo</h3>
           <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
-            galpão para alugar praia grande sp • galpão logístico praia grande • galpão industrial praia grande • ponto comercial praia grande kennedy • aluguel de galpão na marginal imigrantes praia grande • galpão continuação da imigrantes • galpão expressa sul praia grande • galpão piaçaguera praia grande • loja para alugar av kennedy praia grande • salão comercial kennedy praia grande • galpão com docas praia grande • galpão pé direito alto baixada santista • galpão com pátio de manobra praia grande • galpão para transportadora praia grande • galpão para e-commerce praia grande • galpão para centro de distribuição praia grande • cd em praia grande • fulfillment praia grande • galpão para metalúrgica praia grande • galpão para indústria alimentícia praia grande • galpão com avcb praia grande • galpão com alvará praia grande • galpão zoneamento industrial praia grande • terreno industrial praia grande • terreno para construir galpão praia grande • built to suit praia grande • bts praia grande • galpão atípico praia grande • locação atípica praia grande • ponto para franquia praia grande • ponto para fast food kennedy • ponto para clínica praia grande • ponto para academia praia grande • ponto para restaurante praia grande • ponto para pet shop praia grande • ponto para supermercado praia grande • ponto para concessionária praia grande • loja de rua praia grande • salão térreo com vitrine praia grande • sala comercial praia grande • escritório comercial praia grande • imóvel comercial praia grande • imóvel industrial praia grande • imobiliária comercial praia grande • corretor de galpões praia grande • corretor especialista em galpões baixada santista • corretor braz praia grande • aluguel comercial praia grande • locação comercial baixada santista • galpão santos e praia grande • galpão cubatão praia grande • galpão são vicente praia grande • galpão mongaguá praia grande • galpão guarujá praia grande • galpão para alugar perto do porto de santos • galpão rodovia padre manoel da nóbrega • galpão anchieta imigrantes litoral • galpão logístico baixada santista • armazém geral praia grande • depósito para alugar praia grande • mini galpão praia grande • galpão 200m² praia grande • galpão 500m² praia grande • galpão 1000m² praia grande • galpão 2000m² praia grande • galpão 5000m² praia grande • galpão 10000m² praia grande • galpão boqueirão praia grande • galpão tupi praia grande • galpão vila sônia praia grande • galpão mirim praia grande • galpão caiçara praia grande • galpão solemar praia grande • galpão ocian praia grande • galpão guilhermina praia grande • galpão real praia grande • galpão antártica praia grande • comprar galpão em praia grande • vender galpão em praia grande • investir em galpão logístico praia grande • investimento imobiliário praia grande • retorno sobre investimento galpão • galpão pronto para ocupar praia grande • galpão novo praia grande • galpão reformado praia grande • galpão com escritório praia grande • galpão com refeitório praia grande • galpão com vestiário praia grande • galpão com estacionamento praia grande • galpão com portaria 24h praia grande • galpão com segurança patrimonial praia grande • galpão com monitoramento praia grande • galpão com energia trifásica praia grande • galpão com alta carga elétrica praia grande • galpão com subestação praia grande • galpão para oficina praia grande • galpão para autopeças praia grande • galpão para concessionária praia grande • galpão para material de construção praia grande • galpão para distribuidora de bebidas praia grande • galpão para distribuidora de alimentos praia grande • galpão para embalagens praia grande • galpão para gráfica praia grande • galpão para confecção praia grande • galpão para têxtil praia grande • galpão para marcenaria praia grande • galpão para móveis planejados praia grande • galpão para produtos náuticos praia grande • galpão para pesca e caça praia grande • galpão para suprimentos industriais praia grande • galpão com documentação regularizada praia grande • galpão com matrícula atualizada praia grande • galpão com habite-se praia grande • galpão com licença ambiental praia grande • galpão com cetesb praia grande • corretor imóveis comerciais praia grande • imobiliária galpões praia grande • especialista em locação comercial praia grande • negociador de contrato comercial praia grande • consultoria imobiliária comercial praia grande • análise de risco locatício praia grande • contrato locação atípica galpão • fiança bancária galpão praia grande • seguro fiança galpão praia grande • caução galpão praia grande • laudo de avaliação galpão praia grande • avaliação imobiliária comercial praia grande • perícia imobiliária praia grande • assessoria jurídica locação praia grande • advocacia imobiliária praia grande • regularização de galpão praia grande • averbação de construção praia grande • alvará de funcionamento praia grande • taxas e impostos galpão praia grande • iptu comercial praia grande • itbi galpão praia grande.
+            criação de sites • criar site profissional • criar site rápido • criar primeiro site • fazer site do zero • desenvolvimento de sites • desenvolvedor de sites freelancer • agência de criação de sites • empresa de criação de sites • criação de sites profissionais para empresa • site profissional barato • site profissional rápido • site rápido que carrega em 1 segundo • site moderno 2026 • site responsivo mobile first • site institucional • site institucional para pequena empresa • site para advogado • site para médico • site para dentista • site para clínica • site para psicólogo • site para nutricionista • site para personal trainer • site para consultor • site para contador • site para arquiteto • site para designer • site para fotógrafo • site para restaurante • site para lanchonete • site para pizzaria • site para loja • site para distribuidora • site para indústria • site para imobiliária • site para corretor • site para autônomo • site para mei • site para infoprodutor • site para coach • site para mentor • site para agência • site para startup • landing page • criar landing page • landing page de alta conversão • landing page que vende • página de vendas • página de captura de leads • squeeze page • sales page • criação de landing page • landing page para anúncios • landing page para google ads • landing page para facebook ads • landing page para instagram ads • landing page para tiktok ads • loja virtual • criar loja virtual • e-commerce • desenvolvimento de e-commerce • loja online • shopify alternativa • woocommerce alternativa • pagamento online • pix no site • cartão de crédito no site • boleto no site • integração com correios • carrinho abandonado • recuperação de carrinho • chatbot • chatbot inteligente • chatbot com ia • chatbot com inteligência artificial • criar chatbot para site • robô que vende • atendimento automático 24 horas • atendimento 24/7 • atendente virtual • assistente virtual • bot de atendimento • bot que vende • bot que conversa • chat ia para site • chat gpt no meu site • integrar chatgpt no site • integrar openai no site • api openai • api gemini • api anthropic claude • inteligência artificial para vendas • ia para empresa • ia conversacional • atendimento conversacional • whatsapp business api • integração whatsapp api oficial • whatsapp no site • botão whatsapp no site • chat whatsapp flutuante • seo • seo google • seo para google • seo para chatgpt • seo para perplexity • seo para bing • seo para gemini • geo generative engine optimization • aeo answer engine optimization • aparecer no chatgpt • aparecer no google • primeira página do google • ranquear no google • posicionamento no google • palavras chave • cauda longa • long tail keywords • schema markup • dados estruturados json-ld • core web vitals • pagespeed insights • google search console • google analytics 4 • ga4 • tag manager • pixel facebook • pixel tiktok • google ads • facebook ads • instagram ads • tiktok ads • linkedin ads • marketing digital • tráfego pago • tráfego orgânico • inbound marketing • outbound marketing • automação de marketing • rd station • activecampaign • hubspot • crm integrado ao site • mailchimp • email marketing • newsletter • blog para empresa • blog corporativo • marketing de conteúdo • content marketing • copywriting • copy persuasivo • neuromarketing • gatilhos mentais • prova social • escassez • urgência • autoridade • reciprocidade • design ui ux • design responsivo • mobile first • acessibilidade web wcag • velocidade de site • otimização de site • otimização de imagens webp avif • lazy loading • cdn cloudflare • hospedagem de site • hospedagem brasileira • hospedagem nuvem • domínio próprio • registro de domínio • email profissional • google workspace • microsoft 365 • certificado ssl https • cadeado verde no site • segurança do site • backup automático • manutenção de site • atualização de site • suporte de site • dashboard administrativo • painel para editar site • cms • headless cms • react • next.js • astro • vite • tailwind css • typescript • node.js • supabase • firebase • vercel • netlify • cloudflare pages • walter araujo • mr sites • mister sites • o guru dos sites • especialista em sites • melhor profissional de sites • melhor agência de sites • melhor desenvolvedor de sites • criar site no brasil • criar site em português • criar site profissional barato e rápido • quanto custa fazer um site • preço de site profissional • orçamento de site • cotação de site • site com chat inteligente • site com bot vendedor • site que funciona de verdade • site que dá resultado • site que aparece no google • site que aparece no chatgpt • site que vende sozinho • site que trabalha 24 horas.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            É muita coisa. E é justamente por isso que você precisa do <strong>Braz</strong>. Em vez de ficar pulando de portal em portal, filtrando, ligando pra dez corretores diferentes e recebendo foto antiga de galpão que já foi alugado — você manda uma mensagem, explica o que precisa (metragem, localização preferida, tipo de operação, orçamento de aluguel, prazo de ocupação) e o Braz volta com uma seleção curada de imóveis que fazem sentido pro seu negócio. Simples assim. Tempo é dinheiro, e em locação comercial tempo perdido é oportunidade perdida.
+            É muita coisa. E é justamente por isso que você precisa do <strong>Mr. Sites</strong>. Em vez de ficar pulando de freelancer em freelancer, recebendo proposta enrolada, esperando 6 meses por um site que sai feio, lento e sem chat — você manda uma mensagem no WhatsApp, conta o seu negócio, e o Walter volta com uma <strong>proposta direta, prazo curto, preço justo e tecnologia de ponta</strong>. Simples assim. Tempo é dinheiro, e em internet tempo perdido é cliente perdido pro concorrente.
           </p>
         </article>
 
-        <div className="mt-10 p-8 bg-foreground text-primary border-2 border-foreground shadow-bold text-center">
-          <h3 className="text-2xl md:text-4xl font-black uppercase mb-4">Chega de Enrolação. Bora Fechar Galpão?</h3>
-          <CTAWhats size="lg" message={`${mensagemPadrao} Bora fechar galpão.`}>
-            MANDA MENSAGEM PRO BRAZ
+        <div className="mt-10 p-8 bg-foreground text-primary border-2 border-foreground shadow-bold-magenta text-center">
+          <h3 className="text-2xl md:text-4xl font-black uppercase mb-4">Chega de Site Fraco. Bora Fazer o Seu?</h3>
+          <CTAWhats size="lg" message={`${mensagemPadrao} Bora fazer meu site.`}>
+            MANDA MENSAGEM PRO MR. SITES
           </CTAWhats>
         </div>
       </Section>
@@ -356,17 +345,17 @@ const Index = () => {
       {/* DEPOIMENTOS */}
       <Section id="depoimentos">
         <div className="text-center mb-12">
-          <div className="inline-block bg-primary text-primary-foreground px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-foreground">Clientes do Braz</div>
-          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">Quem Já Fechou Negócio Não Conta Mentira</h2>
+          <div className="inline-block bg-[hsl(var(--neon-green))] text-[hsl(var(--neon-green-foreground))] px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-foreground">Clientes do Mr. Sites</div>
+          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">Quem Já Tem Site Com IA Não Volta Mais Pra Trás</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { nome: "Ricardo M.", empresa: "Transportadora — Marginal Piaçaguera", depo: "Eu tava há 3 meses rodando portal de imóveis. O Braz resolveu em 1 semana. Galpão com doca, pátio e AVCB. Preço justo. Fechou na hora." },
-            { nome: "Aline F.", empresa: "E-commerce — CD Praia Grande", depo: "Precisava de galpão logístico pra fulfillment do meu e-commerce. O Braz me mostrou 4 opções, todas na marginal. Escolhi, assinei, mudei. Atendimento cinco estrelas." },
-            { nome: "Carlos D.", empresa: "Franquia — Av. Kennedy", depo: "Ponto comercial na Kennedy é ouro. O Braz me conseguiu uma esquina que nem tava anunciada. Fluxo absurdo. Faturamento do 1º mês pagou a reforma." },
+            { nome: "Renata S.", empresa: "Clínica de Estética — SP", depo: "Tava perdendo cliente pra clínica concorrente que aparecia no Google. O Mr. Sites refez meu site e em 60 dias eu já tava em primeiro lugar. O chat fecha agendamento até de madrugada.", shadowCls: "shadow-bold-magenta", starCls: "text-accent" },
+            { nome: "Diego P.", empresa: "Distribuidora — RJ", depo: "Meu primeiro site da vida, fiz com o Walter. No ar em 6 dias. Em 3 meses o chat IA já tinha fechado mais de 80 pedidos sozinho. Investimento se pagou no primeiro mês.", shadowCls: "shadow-bold-cyan", starCls: "text-cyan-neon" },
+            { nome: "Camila T.", empresa: "Coach — Online", depo: "O ChatGPT começou a me indicar quando alguém pergunta sobre coach de carreira. SEO do Mr. Sites é outro nível. E o chat conversa exatamente como eu falaria. Surreal.", shadowCls: "shadow-bold-green", starCls: "text-neon-green" },
           ].map((d, i) => (
-            <div key={i} className="bg-background p-6 border-2 border-foreground shadow-bold">
-              <div className="flex gap-1 mb-3 text-primary">
+            <div key={i} className={`bg-background p-6 border-2 border-foreground ${d.shadowCls}`}>
+              <div className={`flex gap-1 mb-3 ${d.starCls}`}>
                 {[...Array(5)].map((_, s) => <Star key={s} className="w-5 h-5 fill-current" />)}
               </div>
               <p className="text-muted-foreground italic mb-4 leading-relaxed">"{d.depo}"</p>
@@ -382,22 +371,23 @@ const Index = () => {
       {/* FAQ */}
       <Section id="faq" className="bg-foreground text-primary">
         <div className="text-center mb-12">
-          <div className="inline-block bg-primary text-primary-foreground px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-primary">Perguntou, Braz Responde</div>
-          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">Dúvidas Sobre Alugar Galpão em Praia Grande</h2>
+          <div className="inline-block bg-accent text-accent-foreground px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-primary">Perguntou, Mr. Sites Responde</div>
+          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">Dúvidas Sobre Criação de Sites com IA</h2>
         </div>
         <div className="max-w-3xl mx-auto space-y-4">
           {[
-            { q: "Quanto custa alugar um galpão em Praia Grande?", a: "Depende de metragem, localização e infraestrutura. Galpões na marginal da expressa sul e Av. Kennedy têm valor premium. Mini galpões em bairros industriais são mais acessíveis. Mande a sua necessidade no WhatsApp e o Braz volta com valores reais do mercado em 1 hora." },
-            { q: "Vocês trabalham só com galpão logístico ou também com ponto comercial?", a: "Ambos. Galpões logísticos e industriais na marginal e zona industrial, e pontos comerciais na Av. Kennedy, Castelo Branco, Avenida Brasil e demais bairros comerciais de Praia Grande." },
-            { q: "Preciso de galpão urgente, em quanto tempo acho?", a: "Se a demanda for padrão (500 a 3000m², na marginal ou Kennedy), o Braz mostra opção no mesmo dia. Para demandas específicas (metragem grande, instalações especiais, zoneamento industrial exclusivo), de 48 a 72 horas." },
-            { q: "Tem galpão para comprar também, não só alugar?", a: "Sim. Locação e venda. Também intermediamos terrenos industriais para quem quer construir o próprio galpão em Praia Grande (built-to-suit)." },
-            { q: "Como funciona a garantia do contrato?", a: "Trabalhamos com fiança bancária, seguro fiança, caução e fiador pessoa física ou jurídica. O Braz ajuda a estruturar a melhor garantia pro seu perfil." },
-            { q: "Atendem empresas de fora da Baixada Santista?", a: "Sim. A maioria dos clientes do Braz são empresas de São Paulo, ABC, interior e até de outros estados que estão expandindo operação logística para o litoral por causa do Porto de Santos." },
+            { q: "Quanto custa fazer um site com o Mr. Sites?", a: "Depende do tipo (landing page, institucional, e-commerce) e se inclui chat IA. Trabalho com planos mensais acessíveis (com hospedagem e manutenção inclusas) e pacotes fechados. Manda sua necessidade no WhatsApp e o Walter volta com proposta direta em 1 hora." },
+            { q: "Em quanto tempo meu site fica pronto?", a: "Landing page: 3 a 5 dias úteis. Site institucional: 7 a 10 dias úteis. E-commerce: 15 a 30 dias. Chat IA é configurado junto e treinado em paralelo." },
+            { q: "Como funciona o chat inteligente?", a: "O chat usa inteligência artificial (GPT, Claude, Gemini) treinada com o conteúdo da sua empresa. Conversa em português natural, qualifica leads, mostra preço, agenda reunião, envia link de pagamento e encaminha lead quente pro seu WhatsApp. Funciona 24/7." },
+            { q: "Eu preciso entender de tecnologia?", a: "Zero. Mr. Sites cuida de tudo: domínio, hospedagem, e-mail, configuração, treinamento da IA. Você manda os textos por áudio no WhatsApp e recebe o site pronto pra usar." },
+            { q: "O site funciona no celular?", a: "Obrigatoriamente. Todo site Mr. Sites é mobile-first, responsivo, com pontuação 100/100 no PageSpeed Insights tanto desktop quanto mobile. Em 2026, mais de 70% do tráfego é celular." },
+            { q: "O site aparece no Google e no ChatGPT?", a: "Sim. SEO técnico e SEO generativo (GEO/AEO) inclusos. Schema markup, meta tags, sitemap, conteúdo otimizado, integração Search Console e Analytics. Resultados começam em 30-90 dias." },
+            { q: "Atendem todo o Brasil?", a: "Sim. Atendimento 100% online via WhatsApp, Google Meet e e-mail. Cliente em qualquer cidade do Brasil ou exterior." },
           ].map((f, i) => (
-            <details key={i} className="bg-background text-foreground border-2 border-primary p-5 group">
+            <details key={i} className="bg-background text-foreground border-2 border-accent p-5 group">
               <summary className="font-black uppercase cursor-pointer flex justify-between items-center">
                 {f.q}
-                <span className="text-primary text-2xl group-open:rotate-45 transition-smooth">+</span>
+                <span className="text-accent text-2xl group-open:rotate-45 transition-smooth">+</span>
               </summary>
               <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
             </details>
@@ -406,33 +396,33 @@ const Index = () => {
       </Section>
 
       {/* CTA FINAL */}
-      <Section className="bg-primary text-primary-foreground">
+      <Section className="bg-gradient-vapor text-primary-foreground">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-foreground text-primary px-3 py-1 font-black text-xs uppercase mb-4 border-2 border-foreground">Última Chamada</div>
-            <h2 className="text-4xl md:text-6xl font-black uppercase leading-[0.95] mb-6">
-              Melhor Chamar o <span className="text-stroke">Braz</span>.
+            <h2 className="text-4xl md:text-6xl font-black uppercase leading-[0.95] mb-6 text-primary">
+              Melhor Chamar o <span className="text-stroke">Mr. Sites</span>.
             </h2>
-            <p className="text-lg mb-8 font-medium">
-              Seu galpão ideal em Praia Grande tá a uma mensagem de distância. Marginal, Kennedy, zona industrial — o Braz conhece, o Braz tem, o Braz fecha. Sem enrolação. Do jeito certo.
+            <p className="text-lg mb-8 font-medium text-primary">
+              Seu site profissional com chat inteligente está a uma mensagem de distância. Site rápido, SEO de Google e ChatGPT, robô vendendo 24/7 — o Mr. Sites entrega tudo. Sem enrolação. Do jeito certo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAWhats size="lg" message={`${mensagemPadrao} Quero fechar negócio.`} className="animate-pulse-urgent">
                 WHATSAPP AGORA
               </CTAWhats>
-              <a href={`tel:+55${BRAZ.whatsappNumero}`} className="inline-flex items-center gap-3 bg-foreground text-primary font-black uppercase px-8 py-6 border-2 border-foreground shadow-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-smooth text-lg">
+              <a href={`tel:+55${WALTER.whatsappNumero}`} className="inline-flex items-center gap-3 bg-foreground text-primary font-black uppercase px-8 py-6 border-2 border-foreground shadow-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-smooth text-lg">
                 <Phone className="w-5 h-5" /> LIGAR
               </a>
             </div>
-            <div className="mt-6 text-sm font-bold">
-              {BRAZ.creci} • Atendimento 7 dias por semana • Baixada Santista
+            <div className="mt-6 text-sm font-bold text-primary">
+              Atendimento 7 dias por semana • Brasil inteiro • 100% online
             </div>
           </div>
           <div className="relative">
-            <div className="bg-foreground p-2 border-4 border-foreground shadow-bold rotate-2">
-              <img src={brazPhoneImg} alt="Corretor Braz Mota ao telefone, atendendo cliente de galpão em Praia Grande" className="w-full" loading="lazy" width={1024} height={1280} />
+            <div className="bg-foreground p-2 border-4 border-foreground shadow-bold-cyan rotate-2">
+              <img src={walterPhoneImg} alt="Walter Araujo Mr. Sites mostrando site com chat IA que vende 24/7" className="w-full" loading="lazy" width={1024} height={1280} />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-destructive text-destructive-foreground px-6 py-3 font-black uppercase border-2 border-foreground shadow-bold rotate-[-4deg] text-lg animate-pulse-urgent">
+            <div className="absolute -bottom-6 -left-6 bg-[hsl(var(--neon-green))] text-[hsl(var(--neon-green-foreground))] px-6 py-3 font-black uppercase border-2 border-foreground shadow-bold rotate-[-4deg] text-lg animate-pulse-urgent">
               Online Agora!
             </div>
           </div>
@@ -440,31 +430,28 @@ const Index = () => {
       </Section>
 
       {/* FOOTER */}
-      <footer className="bg-foreground text-primary/70 py-10 px-4 border-t-4 border-primary">
+      <footer className="bg-foreground text-primary/70 py-10 px-4 border-t-4 border-accent">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="font-black text-primary text-xl uppercase mb-2">Galpão em Praia Grande</div>
-              <p className="text-sm mb-3">Especialistas em locação, venda, compra e permuta de galpões logísticos, industriais, pontos comerciais, terrenos, casas, apartamentos e sítios em Praia Grande SP e Baixada Santista.</p>
-              <p className="text-xs">Compra • Venda • Aluga • Permuta</p>
+              <div className="font-black text-primary text-xl uppercase mb-2">Mr. Sites</div>
+              <p className="text-sm mb-3">Walter Araujo, especialista em criação de sites profissionais, rápidos, com chat inteligente IA 24/7 e SEO para Google e ChatGPT. Sites que realmente funcionam.</p>
+              <p className="text-xs">Sites • Landing Pages • E-commerce • Chat IA • SEO</p>
             </div>
             <div>
-              <div className="font-black text-primary uppercase mb-2">Braz Mota — Corretor</div>
-              <p className="text-sm">{BRAZ.creci}</p>
-              <p className="text-sm flex items-center gap-2 mt-1"><MessageCircle className="w-3 h-3" /> WhatsApp: {BRAZ.telefone}</p>
-              <p className="text-sm flex items-center gap-2"><Phone className="w-3 h-3" /> Fixo: {BRAZ.telefoneFixo}</p>
-              <p className="text-sm flex items-center gap-2"><Mail className="w-3 h-3" /> {BRAZ.email}</p>
-              <p className="text-sm flex items-center gap-2"><Instagram className="w-3 h-3" /> {BRAZ.instagram}</p>
-              
-              <p className="text-sm flex items-start gap-2 mt-1"><MapPin className="w-3 h-3 mt-1 shrink-0" /> {BRAZ.endereco}</p>
+              <div className="font-black text-[hsl(var(--cyan-neon))] uppercase mb-2">Walter Araujo — Mr. Sites</div>
+              <p className="text-sm flex items-center gap-2 mt-1"><MessageCircle className="w-3 h-3" /> WhatsApp: {WALTER.telefone}</p>
+              <p className="text-sm flex items-center gap-2"><Mail className="w-3 h-3" /> {WALTER.email}</p>
+              <p className="text-sm flex items-center gap-2"><Instagram className="w-3 h-3" /> {WALTER.instagram}</p>
+              <p className="text-sm flex items-start gap-2 mt-1"><Globe className="w-3 h-3 mt-1 shrink-0" /> {WALTER.endereco}</p>
             </div>
             <div>
-              <div className="font-black text-primary uppercase mb-2">Regiões Atendidas</div>
-              <p className="text-sm">Marginal Expressa Sul • Av. Kennedy • Rodovia dos Imigrantes • Zonas Industriais • Boqueirão • Tupi • Vila Sônia • Guilhermina • Toda Praia Grande e Baixada Santista</p>
+              <div className="font-black text-[hsl(var(--neon-green))] uppercase mb-2">Tecnologias</div>
+              <p className="text-sm">React • Next.js • Astro • Tailwind • TypeScript • OpenAI • Claude • Gemini • Supabase • Vercel • Cloudflare • SEO • GEO • AEO</p>
             </div>
           </div>
-          <div className="border-t border-primary/30 pt-6 text-xs text-center">
-            © {new Date().getFullYear()} galpaoempraiagrande.com.br — Todos os direitos reservados. Site desenvolvido para fins comerciais de intermediação imobiliária.
+          <div className="border-t border-accent/30 pt-6 text-xs text-center">
+            © {new Date().getFullYear()} mrsites.com.br — Walter Araujo. Todos os direitos reservados. Criação de sites profissionais com inteligência artificial.
           </div>
         </div>
       </footer>
@@ -474,8 +461,8 @@ const Index = () => {
         href={waLink(mensagemPadrao)}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Conversar com o corretor Braz no WhatsApp"
-        className="fixed bottom-6 right-6 z-50 bg-whatsapp text-whatsapp-foreground p-4 rounded-full border-2 border-foreground shadow-bold hover:scale-110 transition-smooth animate-pulse-urgent"
+        aria-label="Conversar com o Mr. Sites no WhatsApp"
+        className="fixed bottom-6 right-6 z-50 bg-whatsapp text-whatsapp-foreground p-4 rounded-full border-2 border-foreground shadow-bold-magenta hover:scale-110 transition-smooth animate-pulse-urgent"
       >
         <MessageCircle className="w-7 h-7" strokeWidth={2.5} />
       </a>
