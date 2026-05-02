@@ -67,19 +67,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* TOP BAR — discreta */}
+      {/* TOP BAR — discreta com toque neon */}
       <div className="bg-primary text-primary-foreground text-[11px] font-bold overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap py-1.5">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-6 px-4 shrink-0">
-              <span className="flex items-center gap-1.5"><Zap className="w-3 h-3" /> SITE NO AR EM 24H</span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5"><Bot className="w-3 h-3" /> CHAT IA QUE VENDE 24/7</span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5"><Search className="w-3 h-3" /> SEO GOOGLE + CHATGPT</span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5"><Sparkles className="w-3 h-3" /> SITES QUE REALMENTE FUNCIONAM</span>
-              <span>•</span>
+              <span className="flex items-center gap-1.5"><Zap className="w-3 h-3 text-neon" /> SITE NO AR EM 24H</span>
+              <span className="text-neon">•</span>
+              <span className="flex items-center gap-1.5"><Bot className="w-3 h-3 text-neon" /> CHAT IA QUE VENDE 24/7</span>
+              <span className="text-neon">•</span>
+              <span className="flex items-center gap-1.5"><Search className="w-3 h-3 text-neon" /> SEO GOOGLE + CHATGPT</span>
+              <span className="text-neon">•</span>
+              <span className="flex items-center gap-1.5"><Sparkles className="w-3 h-3 text-neon" /> SITES QUE REALMENTE FUNCIONAM</span>
+              <span className="text-neon">•</span>
             </div>
           ))}
         </div>
