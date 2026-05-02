@@ -492,6 +492,9 @@ const Index = () => {
       >
         <MessageCircle className="w-6 h-6" strokeWidth={2.5} />
       </a>
+
+      {/* POPUP exit-intent */}
+      <ExitIntentPopup />
     </div>
   );
 };
