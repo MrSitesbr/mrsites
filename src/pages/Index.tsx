@@ -1,16 +1,18 @@
-import { MessageCircle, Phone, CircleCheck as CheckCircle2, Globe, Bot, Rocket, Search, Clock, Shield, Zap, TrendingUp, Star, Mail, Instagram, Sparkles, MousePointerClick, BrainCircuit, ShoppingCart, BadgeCheck, ArrowRight } from "lucide-react";
+import { MessageCircle, Phone, CircleCheck as CheckCircle2, Globe, Bot, Rocket, Search, Clock, Shield, Zap, TrendingUp, Star, Mail, Instagram, Sparkles, MousePointerClick, BrainCircuit, ShoppingCart, BadgeCheck, ArrowRight, MapPin } from "lucide-react";
 import logo from "@/assets/mr-sites-logo.png";
 import walterImg from "@/assets/walter-portrait.jpg";
 import walterPhoneImg from "@/assets/walter-phone.jpg";
 import walterHeroImg from "@/assets/walter-hero.jpg";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const WALTER = {
   nome: "Walter Araujo",
   apelido: "Mr. Sites",
-  telefone: "(11) 99999-0001",
-  whatsappNumero: "5511999990001",
-  email: "walter@mrsites.com.br",
+  telefone: "(11) 9 7469-8846",
+  whatsappNumero: "5511974698846",
+  email: "contato@mrsites.app",
   instagram: "@mrsites",
+  endereco: "Av. Paulista, 1639 — São Paulo/SP",
 };
 
 const waLink = (msg: string) =>
@@ -54,8 +56,8 @@ const Section = ({ id, children, className = "" }: { id?: string; children: Reac
 );
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
-  <div className="inline-flex items-center gap-2 text-primary font-black uppercase text-xs tracking-[0.2em] mb-4">
-    <span className="h-px w-8 bg-primary" />
+  <div className="inline-flex items-center gap-2 text-neon font-black uppercase text-xs tracking-[0.2em] mb-4">
+    <span className="h-px w-8 bg-neon" />
     {children}
   </div>
 );
@@ -65,19 +67,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* TOP BAR — discreta */}
+      {/* TOP BAR — discreta com toque neon */}
       <div className="bg-primary text-primary-foreground text-[11px] font-bold overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap py-1.5">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-6 px-4 shrink-0">
-              <span className="flex items-center gap-1.5"><Zap className="w-3 h-3" /> SITE NO AR EM 24H</span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5"><Bot className="w-3 h-3" /> CHAT IA QUE VENDE 24/7</span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5"><Search className="w-3 h-3" /> SEO GOOGLE + CHATGPT</span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5"><Sparkles className="w-3 h-3" /> SITES QUE REALMENTE FUNCIONAM</span>
-              <span>•</span>
+              <span className="flex items-center gap-1.5"><Zap className="w-3 h-3 text-neon" /> SITE NO AR EM 24H</span>
+              <span className="text-neon">•</span>
+              <span className="flex items-center gap-1.5"><Bot className="w-3 h-3 text-neon" /> CHAT IA QUE VENDE 24/7</span>
+              <span className="text-neon">•</span>
+              <span className="flex items-center gap-1.5"><Search className="w-3 h-3 text-neon" /> SEO GOOGLE + CHATGPT</span>
+              <span className="text-neon">•</span>
+              <span className="flex items-center gap-1.5"><Sparkles className="w-3 h-3 text-neon" /> SITES QUE REALMENTE FUNCIONAM</span>
+              <span className="text-neon">•</span>
             </div>
           ))}
         </div>
@@ -384,8 +386,10 @@ const Index = () => {
                 <Phone className="w-4 h-4" /> Ligar agora
               </a>
             </div>
-            <div className="mt-5 text-xs font-bold text-primary-foreground/80 uppercase tracking-widest">
-              Atendimento 7 dias • Brasil inteiro • 100% online
+            <div className="mt-5 text-xs font-bold text-primary-foreground/90 uppercase tracking-widest flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span>Atendimento 100% online • 7 dias</span>
+              <span className="opacity-60">|</span>
+              <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-neon" /> {WALTER.endereco}</span>
             </div>
           </div>
           <div className="relative">
@@ -461,10 +465,11 @@ const Index = () => {
               <p className="text-sm text-muted-foreground">Sites inteligentes que conectam, convencem e vendem. Desenvolvido por quem entende de estratégia digital.</p>
             </div>
             <div>
-              <div className="font-black uppercase text-xs tracking-widest text-primary mb-3">Contato</div>
-              <p className="text-sm text-muted-foreground flex items-center gap-2 mb-1.5"><MessageCircle className="w-3.5 h-3.5 text-primary" /> {WALTER.telefone}</p>
-              <p className="text-sm text-muted-foreground flex items-center gap-2 mb-1.5"><Mail className="w-3.5 h-3.5 text-primary" /> {WALTER.email}</p>
-              <p className="text-sm text-muted-foreground flex items-center gap-2"><Instagram className="w-3.5 h-3.5 text-primary" /> {WALTER.instagram}</p>
+              <div className="font-black uppercase text-xs tracking-widest text-neon mb-3">Contato</div>
+              <a href={`https://wa.me/${WALTER.whatsappNumero}`} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-2 mb-1.5 transition-smooth"><MessageCircle className="w-3.5 h-3.5 text-neon" /> {WALTER.telefone}</a>
+              <a href={`mailto:${WALTER.email}`} className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-2 mb-1.5 transition-smooth"><Mail className="w-3.5 h-3.5 text-neon" /> {WALTER.email}</a>
+              <p className="text-sm text-muted-foreground flex items-center gap-2 mb-1.5"><Instagram className="w-3.5 h-3.5 text-neon" /> {WALTER.instagram}</p>
+              <p className="text-sm text-muted-foreground flex items-start gap-2"><MapPin className="w-3.5 h-3.5 text-neon mt-0.5 shrink-0" /> {WALTER.endereco}</p>
             </div>
             <div>
               <div className="font-black uppercase text-xs tracking-widest text-primary mb-3">Serviços</div>
@@ -487,6 +492,9 @@ const Index = () => {
       >
         <MessageCircle className="w-6 h-6" strokeWidth={2.5} />
       </a>
+
+      {/* POPUP exit-intent */}
+      <ExitIntentPopup />
     </div>
   );
 };

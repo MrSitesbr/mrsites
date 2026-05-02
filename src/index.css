@@ -28,6 +28,10 @@
     --accent: 225 100% 55%;
     --accent-foreground: 0 0% 100%;
 
+    /* Verde Limão — micro-detalhes/highlight */
+    --neon: 67 99% 47%;            /* ~#dbee01 */
+    --neon-foreground: 0 0% 4%;
+
     --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
