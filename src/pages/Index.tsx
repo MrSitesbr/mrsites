@@ -1,16 +1,18 @@
-import { MessageCircle, Phone, CircleCheck as CheckCircle2, Globe, Bot, Rocket, Search, Clock, Shield, Zap, TrendingUp, Star, Mail, Instagram, Sparkles, MousePointerClick, BrainCircuit, ShoppingCart, BadgeCheck, ArrowRight } from "lucide-react";
+import { MessageCircle, Phone, CircleCheck as CheckCircle2, Globe, Bot, Rocket, Search, Clock, Shield, Zap, TrendingUp, Star, Mail, Instagram, Sparkles, MousePointerClick, BrainCircuit, ShoppingCart, BadgeCheck, ArrowRight, MapPin } from "lucide-react";
 import logo from "@/assets/mr-sites-logo.png";
 import walterImg from "@/assets/walter-portrait.jpg";
 import walterPhoneImg from "@/assets/walter-phone.jpg";
 import walterHeroImg from "@/assets/walter-hero.jpg";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const WALTER = {
   nome: "Walter Araujo",
   apelido: "Mr. Sites",
-  telefone: "(11) 99999-0001",
-  whatsappNumero: "5511999990001",
-  email: "walter@mrsites.com.br",
+  telefone: "(11) 9 7469-8846",
+  whatsappNumero: "5511974698846",
+  email: "contato@mrsites.app",
   instagram: "@mrsites",
+  endereco: "Av. Paulista, 1639 — São Paulo/SP",
 };
 
 const waLink = (msg: string) =>
