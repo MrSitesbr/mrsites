@@ -465,10 +465,11 @@ const Index = () => {
               <p className="text-sm text-muted-foreground">Sites inteligentes que conectam, convencem e vendem. Desenvolvido por quem entende de estratégia digital.</p>
             </div>
             <div>
-              <div className="font-black uppercase text-xs tracking-widest text-primary mb-3">Contato</div>
-              <p className="text-sm text-muted-foreground flex items-center gap-2 mb-1.5"><MessageCircle className="w-3.5 h-3.5 text-primary" /> {WALTER.telefone}</p>
-              <p className="text-sm text-muted-foreground flex items-center gap-2 mb-1.5"><Mail className="w-3.5 h-3.5 text-primary" /> {WALTER.email}</p>
-              <p className="text-sm text-muted-foreground flex items-center gap-2"><Instagram className="w-3.5 h-3.5 text-primary" /> {WALTER.instagram}</p>
+              <div className="font-black uppercase text-xs tracking-widest text-neon mb-3">Contato</div>
+              <a href={`https://wa.me/${WALTER.whatsappNumero}`} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-2 mb-1.5 transition-smooth"><MessageCircle className="w-3.5 h-3.5 text-neon" /> {WALTER.telefone}</a>
+              <a href={`mailto:${WALTER.email}`} className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-2 mb-1.5 transition-smooth"><Mail className="w-3.5 h-3.5 text-neon" /> {WALTER.email}</a>
+              <p className="text-sm text-muted-foreground flex items-center gap-2 mb-1.5"><Instagram className="w-3.5 h-3.5 text-neon" /> {WALTER.instagram}</p>
+              <p className="text-sm text-muted-foreground flex items-start gap-2"><MapPin className="w-3.5 h-3.5 text-neon mt-0.5 shrink-0" /> {WALTER.endereco}</p>
             </div>
             <div>
               <div className="font-black uppercase text-xs tracking-widest text-primary mb-3">Serviços</div>
