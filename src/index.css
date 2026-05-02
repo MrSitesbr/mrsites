@@ -2,40 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design System - Mr. Sites Walter Araujo | Saul Goodman + Vaporwave Neon: amarelo + magenta + cyano + verde fluorescente */
+/* Mr. Sites — Walter Araujo | Paleta: Preto, Azul Royal, Branco. Estilo Saul Goodman moderno. */
 
 @layer base {
   :root {
-    --background: 48 100% 97%;
-    --foreground: 0 0% 6%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 6%;
+    --card: 225 35% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 6%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Amarelo "Better Call Saul" */
-    --primary: 48 100% 50%;
-    --primary-foreground: 0 0% 6%;
+    /* Azul Royal — destaque principal */
+    --primary: 225 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 6%;
-    --secondary-foreground: 48 100% 50%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 4%;
 
-    --muted: 48 30% 94%;
-    --muted-foreground: 0 0% 30%;
+    --muted: 225 20% 12%;
+    --muted-foreground: 0 0% 70%;
 
-    /* Azul Royal */
-    --accent: 225 100% 45%;
+    --accent: 225 100% 55%;
     --accent-foreground: 0 0% 100%;
-
-    /* Cyano neon */
-    --cyan-neon: 185 100% 50%;
-    --cyan-neon-foreground: 0 0% 6%;
-
-    /* Verde fluorescente */
-    --neon-green: 130 100% 50%;
-    --neon-green-foreground: 0 0% 6%;
 
     --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
@@ -43,40 +34,32 @@
     --whatsapp: 142 70% 42%;
     --whatsapp-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 48 100% 50%;
+    --border: 0 0% 100% / 0.1;
+    --input: 225 20% 16%;
+    --ring: 225 100% 50%;
 
-    --radius: 0.25rem;
+    --radius: 0.75rem;
 
-    /* Gradientes e sombras dramáticas */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(225 80% 14%) 100%);
-    --gradient-yellow: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(40 100% 55%) 100%);
-    --gradient-urgent: linear-gradient(90deg, hsl(225 100% 45%), hsl(48 100% 50%));
-    --gradient-neon: linear-gradient(90deg, hsl(225 100% 45%), hsl(185 100% 50%), hsl(130 100% 50%), hsl(48 100% 50%));
-    --gradient-vapor: linear-gradient(135deg, hsl(225 100% 45%) 0%, hsl(185 100% 50%) 100%);
+    /* Gradientes */
+    --gradient-hero: radial-gradient(ellipse at top right, hsl(225 100% 25% / 0.6), hsl(0 0% 4%) 70%);
+    --gradient-blue: linear-gradient(135deg, hsl(225 100% 50%) 0%, hsl(225 100% 35%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(225 100% 50% / 0.35), transparent 70%);
 
-    --shadow-bold: 6px 6px 0 0 hsl(0 0% 6%);
-    --shadow-bold-yellow: 6px 6px 0 0 hsl(48 100% 50%);
-    --shadow-bold-magenta: 6px 6px 0 0 hsl(225 100% 45%);
-    --shadow-bold-cyan: 6px 6px 0 0 hsl(185 100% 50%);
-    --shadow-bold-green: 6px 6px 0 0 hsl(130 100% 50%);
-    --shadow-lg: 0 20px 50px -10px hsl(0 0% 0% / 0.35);
-    --shadow-glow: 0 0 40px hsl(48 100% 50% / 0.4);
-    --shadow-glow-magenta: 0 0 40px hsl(225 100% 45% / 0.6);
-    --shadow-glow-cyan: 0 0 40px hsl(185 100% 50% / 0.6);
-    --shadow-glow-green: 0 0 40px hsl(130 100% 50% / 0.6);
+    /* Sombras */
+    --shadow-glow: 0 0 60px hsl(225 100% 50% / 0.45);
+    --shadow-card: 0 20px 50px -20px hsl(225 100% 30% / 0.4);
+    --shadow-bold: 6px 6px 0 0 hsl(225 100% 50%);
 
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 225 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 20% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.08;
+    --sidebar-ring: 225 100% 50%;
   }
 }
 
@@ -95,62 +78,37 @@
 }
 
 @layer utilities {
-  .text-stroke {
-    -webkit-text-stroke: 2px hsl(var(--foreground));
-    color: transparent;
-  }
-  .shadow-bold { box-shadow: var(--shadow-bold); }
-  .shadow-bold-yellow { box-shadow: var(--shadow-bold-yellow); }
-  .shadow-bold-magenta { box-shadow: var(--shadow-bold-magenta); }
-  .shadow-bold-cyan { box-shadow: var(--shadow-bold-cyan); }
-  .shadow-bold-green { box-shadow: var(--shadow-bold-green); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
-  .shadow-glow-magenta { box-shadow: var(--shadow-glow-magenta); }
-  .shadow-glow-cyan { box-shadow: var(--shadow-glow-cyan); }
-  .shadow-glow-green { box-shadow: var(--shadow-glow-green); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-bold { box-shadow: var(--shadow-bold); }
   .bg-gradient-hero { background: var(--gradient-hero); }
-  .bg-gradient-yellow { background: var(--gradient-yellow); }
-  .bg-gradient-urgent { background: var(--gradient-urgent); }
-  .bg-gradient-neon { background: var(--gradient-neon); }
-  .bg-gradient-vapor { background: var(--gradient-vapor); }
+  .bg-gradient-blue { background: var(--gradient-blue); }
+  .bg-gradient-glow { background: var(--gradient-glow); }
   .transition-smooth { transition: var(--transition); }
 
-  .tape-neon {
-    background: repeating-linear-gradient(
-      45deg,
-      hsl(225 100% 45%),
-      hsl(225 100% 45%) 20px,
-      hsl(185 100% 50%) 20px,
-      hsl(185 100% 50%) 40px,
-      hsl(130 100% 50%) 40px,
-      hsl(130 100% 50%) 60px,
-      hsl(48 100% 50%) 60px,
-      hsl(48 100% 50%) 80px
-    );
+  .text-stroke {
+    -webkit-text-stroke: 2px hsl(var(--primary));
+    color: transparent;
   }
 
-  .tape {
-    background: repeating-linear-gradient(
-      45deg,
-      hsl(var(--primary)),
-      hsl(var(--primary)) 20px,
-      hsl(0 0% 6%) 20px,
-      hsl(0 0% 6%) 40px
-    );
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(225 100% 50% / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(225 100% 50% / 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
   }
 
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
-  .animate-marquee { animation: marquee 30s linear infinite; }
+  .animate-marquee { animation: marquee 40s linear infinite; }
 
-  @keyframes pulse-urgent {
-    0%, 100% { box-shadow: 0 0 0 0 hsl(var(--destructive) / 0.6); }
-    50% { box-shadow: 0 0 0 20px hsl(var(--destructive) / 0); }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(225 100% 50% / 0.6); }
+    50% { box-shadow: 0 0 0 18px hsl(225 100% 50% / 0); }
   }
-  .animate-pulse-urgent { animation: pulse-urgent 2s infinite; }
+  .animate-pulse-glow { animation: pulse-glow 2.4s infinite; }
 }
 
-/* Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap');
