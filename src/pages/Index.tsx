@@ -56,8 +56,8 @@ const Section = ({ id, children, className = "" }: { id?: string; children: Reac
 );
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
-  <div className="inline-flex items-center gap-2 text-primary font-black uppercase text-xs tracking-[0.2em] mb-4">
-    <span className="h-px w-8 bg-primary" />
+  <div className="inline-flex items-center gap-2 text-neon font-black uppercase text-xs tracking-[0.2em] mb-4">
+    <span className="h-px w-8 bg-neon" />
     {children}
   </div>
 );
