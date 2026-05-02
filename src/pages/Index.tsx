@@ -386,8 +386,10 @@ const Index = () => {
                 <Phone className="w-4 h-4" /> Ligar agora
               </a>
             </div>
-            <div className="mt-5 text-xs font-bold text-primary-foreground/80 uppercase tracking-widest">
-              Atendimento 7 dias • Brasil inteiro • 100% online
+            <div className="mt-5 text-xs font-bold text-primary-foreground/90 uppercase tracking-widest flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span>Atendimento 100% online • 7 dias</span>
+              <span className="opacity-60">|</span>
+              <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-neon" /> {WALTER.endereco}</span>
             </div>
           </div>
           <div className="relative">
