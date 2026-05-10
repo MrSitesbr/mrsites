@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, CheckCircle2, Zap, Bot, Search, Sparkles, Shield, Rocket, Star, Mail, Instagram, MapPin, Globe } from "lucide-react";
+import { MessageCircle, Phone, CircleCheck as CheckCircle2, Zap, Bot, Search, Sparkles, Shield, Rocket, Star, Mail, Instagram, MapPin, Globe } from "lucide-react";
 import walterHeroImg from "@/assets/walter-hero.jpg";
 import walterImg from "@/assets/walter-portrait.jpg";
 import walterPhoneImg from "@/assets/walter-phone.jpg";
